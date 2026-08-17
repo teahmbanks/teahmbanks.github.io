@@ -85,14 +85,14 @@ Do not silently choose between conflicting requirements. Record the conflict and
 
 The global spec must be used together with these eight feature documents before implementation:
 
-- `ai/features/setup-deploy.feature.md`
-- `ai/features/header-footer.feature.md`
-- `ai/features/home-page.feature.md`
-- `ai/features/portfolio-page.feature.md`
-- `ai/features/link-page.feature.md`
-- `ai/features/contact-page.feature.md`
-- `ai/features/login-page.feature.md`
-- `ai/features/back-office.feature.md`
+- `docs/ai/features/setup-deploy.feature.md`
+- `docs/ai/features/header-footer.feature.md`
+- `docs/ai/features/home-page.feature.md`
+- `docs/ai/features/portfolio-page.feature.md`
+- `docs/ai/features/link-page.feature.md`
+- `docs/ai/features/contact-page.feature.md`
+- `docs/ai/features/login-page.feature.md`
+- `docs/ai/features/back-office.feature.md`
 
 Each feature document must define its goal; in-scope and out-of-scope behavior; requirements and user flow; pages, components, and external interfaces; data and validation; expected behavior; accessibility considerations; responsive behavior; failure and empty states; and testable acceptance criteria.
 
@@ -228,18 +228,18 @@ username.github.io/
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml
-├── ai/
-│   ├── ai-spec.md
-│   └── features/
-│       ├── setup-deploy.feature.md
-│       ├── header-footer.feature.md
-│       ├── home-page.feature.md
-│       ├── portfolio-page.feature.md
-│       ├── link-page.feature.md
-│       ├── contact-page.feature.md
-│       ├── login-page.feature.md
-│       └── back-office.feature.md
 ├── docs/
+│   ├── ai/
+│   │   ├── ai-spec.md
+│   │   └── features/
+│   │       ├── setup-deploy.feature.md
+│   │       ├── header-footer.feature.md
+│   │       ├── home-page.feature.md
+│   │       ├── portfolio-page.feature.md
+│   │       ├── link-page.feature.md
+│   │       ├── contact-page.feature.md
+│   │       ├── login-page.feature.md
+│   │       └── back-office.feature.md
 │   ├── script-1.md
 │   ├── script-2.md
 │   └── pitch-feedback.md
