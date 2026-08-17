@@ -427,3 +427,10 @@ FodyWeavers.xsd
 *.msix
 *.msm
 *.msp
+# Module 16 React/Vite project
+dist/
+.DS_Store
+.idea/
+.env
+.env.local
+.env.*.local
