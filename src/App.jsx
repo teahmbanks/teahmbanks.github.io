@@ -1,22 +1,81 @@
-/**
- * Provides the accessible foundation shell while portfolio features are built.
- */
+import { useState } from 'react'
+import MainLayout from './layouts/MainLayout.jsx'
+import PagePlaceholder from './components/PagePlaceholder.jsx'
+import usePresentationMode from './hooks/usePresentationMode.js'
+import HomePage from './pages/HomePage.jsx'
+import WelcomePortal from './pages/WelcomePortal.jsx'
+import { publicViewIds } from './data/navigation.js'
+
+const placeholderViews = {
+  portfolio: {
+    eyebrow: 'Portfolio',
+    title: 'Featured Projects',
+    description: 'Interactive project stories, education, work experience, and a downloadable resume will live here.',
+  },
+  skills: {
+    eyebrow: 'Experience',
+    title: 'Skills and Experience',
+    description: 'Technical knowledge, teaching practice, stage management, and transferable strengths will come together here.',
+  },
+  about: {
+    eyebrow: 'Personal story',
+    title: 'About Me',
+    description: 'The journey through theater, education, and programming will be shared here.',
+  },
+  contact: {
+    eyebrow: 'Connect',
+    title: 'Contact',
+    description: 'LinkedIn access and the secure Supabase-backed message form will be available here.',
+  },
+  links: {
+    eyebrow: 'Resources',
+    title: 'Links',
+    description: 'Useful professional and technical resources will be organized here.',
+  },
+}
+
+/** Coordinates shared public-view state without adding public route paths. */
 function App() {
+  const [activeView, setActiveView] = useState('welcome')
+  const { presentationMode, setPresentationMode } = usePresentationMode()
+
+  function navigateTo(requestedView) {
+    const nextView = publicViewIds.has(requestedView) ? requestedView : 'welcome'
+    setActiveView(nextView)
+
+    window.requestAnimationFrame(() => {
+      document.getElementById('view-heading')?.focus()
+    })
+  }
+
+  function renderActiveView() {
+    if (activeView === 'welcome') {
+      return (
+        <WelcomePortal
+          onEnter={() => navigateTo('home')}
+          presentationMode={presentationMode}
+          setPresentationMode={setPresentationMode}
+        />
+      )
+    }
+
+    if (activeView === 'home') {
+      return <HomePage />
+    }
+
+    const view = placeholderViews[activeView] ?? placeholderViews.about
+
+    return <PagePlaceholder {...view} />
+  }
+
   return (
-    <main className="foundation-shell" id="main-content">
-      <div className="foundation-shell__accent" aria-hidden="true" />
-      <section className="foundation-shell__content" aria-labelledby="page-title">
-        <p className="foundation-shell__eyebrow">Portfolio foundation</p>
-        <h1 id="page-title">Accessible to All</h1>
-        <p className="foundation-shell__lead">
-          A professional portfolio designed to meet visitors where they are.
-        </p>
-        <p className="foundation-shell__status" role="status">
-          The Welcome Portal and portfolio experiences are being built with
-          accessibility at the center.
-        </p>
-      </section>
-    </main>
+    <MainLayout
+      activeView={activeView}
+      onNavigate={navigateTo}
+      presentationMode={presentationMode}
+    >
+      {renderActiveView()}
+    </MainLayout>
   )
 }
 
