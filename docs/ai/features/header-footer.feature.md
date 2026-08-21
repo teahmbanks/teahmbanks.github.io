@@ -192,7 +192,7 @@ Navigation definitions must be stored once and rendered by both desktop and mobi
 - [x] A valid presentation choice persists; invalid/unavailable storage safely falls back to Simple.
 - [x] Current-view and keyboard-focus states are visible and programmatically conveyed.
 - [x] Skip link and semantic landmarks work.
-- [ ] All three modes are checked at desktop and 320px mobile widths without horizontal overflow.
+- [x] All three modes are checked at desktop and 320px mobile widths without horizontal overflow.
 - [x] Reduced-motion behavior is respected.
 - [x] Browser console has no known errors in required flows.
 - [x] `npm run lint`, `npm run build`, and `git diff --check` pass.

@@ -518,6 +518,13 @@ html[data-presentation-mode='dramatic'] .site-footer__copyright {
   }
 }
 
+@media (max-width: 768px) {
+  /* Keep the fixed navigation anchored to the viewport, not the blurred header. */
+  .site-header {
+    backdrop-filter: none;
+  }
+}
+
 @media (min-width: 769px) {
   .site-shell {
     padding-bottom: 0;
