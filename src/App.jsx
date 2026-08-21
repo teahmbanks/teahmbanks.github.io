@@ -6,6 +6,7 @@ import HomePage from './pages/HomePage.jsx'
 import PortfolioPage from './pages/PortfolioPage.jsx'
 import SkillsExperiencePage from './pages/SkillsExperiencePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
+import LinksPage from './pages/LinksPage.jsx'
 import WelcomePortal from './pages/WelcomePortal.jsx'
 import { publicViewIds } from './data/navigation.js'
 
@@ -14,11 +15,6 @@ const placeholderViews = {
     eyebrow: 'Connect',
     title: 'Contact',
     description: 'LinkedIn access and the secure Supabase-backed message form will be available here.',
-  },
-  links: {
-    eyebrow: 'Resources',
-    title: 'Links',
-    description: 'Useful professional and technical resources will be organized here.',
   },
 }
 
@@ -61,6 +57,10 @@ function App() {
 
     if (activeView === 'about') {
       return <AboutPage />
+    }
+
+    if (activeView === 'links') {
+      return <LinksPage />
     }
 
     const view = placeholderViews[activeView] ?? placeholderViews.about
