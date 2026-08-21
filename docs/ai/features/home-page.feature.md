@@ -143,24 +143,25 @@ Each technical or transferable skill contains:
 
 ## 9. AI Image Record
 
-- Status: pending generation during Home implementation.
+- Date: August 21, 2026.
 - Tool: OpenAI built-in image generator.
-- Required outputs: two locally stored images supporting adaptive problem-solving and the intersection of development, education, and theater.
-- Constraints: no text, logos, credentials, employer marks, fabricated project interfaces, watermarks, or false documentary evidence.
-- Final prompts, generation date, filenames, usage, and alternative text must be added here and to `RESEARCH.md` before completion.
+- `problem-solving-path.jpg`: an editorial metaphor showing books, modular code-like forms, connected ideas, and branching paths resolving into a clear route.
+- `connected-strengths.jpg`: an editorial metaphor connecting a theater stage, open book, discussion forms, and modular technology through one coordinated system.
+- Constraints: no people, text, logos, credentials, employer marks, fabricated project interfaces, watermarks, or false documentary evidence.
+- Usage and alternative text are centralized in `src/data/homeData.js`; prompt purposes and final paths are also recorded in `RESEARCH.md`.
 
 ## 10. Acceptance Criteria
 
 - [x] Work is performed on `feature/home-page`, created from synchronized `dev`.
 - [x] The global specification and this feature specification were reviewed before implementation.
-- [ ] Home is directly available in the root application experience without adding a public route path.
-- [ ] The introduction prominently displays the student's name, role or tagline, and brief supporting paragraph.
-- [ ] At least three technical skills include supporting text and meaningful icons.
-- [ ] At least three soft skills or talents include supporting text and meaningful icons.
-- [ ] Introduction, technical skills, and transferable skills are clearly separated visual sections.
-- [ ] At least two relevant AI-generated images are present, accessible, optimized, and documented.
-- [ ] Simple, Corporate, and Dramatic modes present identical content and functionality.
-- [ ] Keyboard, focus, heading, image-alternative, and reduced-motion behavior are verified.
-- [ ] Desktop, 768px, 320px, and 200% zoom checks pass without horizontal overflow.
-- [ ] Browser console has no known errors in required flows.
-- [ ] `npm run lint`, `npm run build`, and `git diff --check` pass.
+- [x] Home is directly available in the root application experience without adding a public route path.
+- [x] The introduction prominently displays the student's name, role or tagline, and brief supporting paragraph.
+- [x] At least three technical skills include supporting text and meaningful icons.
+- [x] At least three soft skills or talents include supporting text and meaningful icons.
+- [x] Introduction, technical skills, and transferable skills are clearly separated visual sections.
+- [x] At least two relevant AI-generated images are present, accessible, optimized, and documented.
+- [x] Simple, Corporate, and Dramatic modes present identical content and functionality.
+- [x] Keyboard, focus, heading, image-alternative, and reduced-motion behavior are verified.
+- [x] Desktop, 768px, 320px, and 200% zoom-equivalent reflow checks pass without horizontal overflow.
+- [x] Browser console has no known errors in required flows.
+- [x] `npm run lint`, `npm run build`, and `git diff --check` pass.
