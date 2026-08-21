@@ -18,6 +18,62 @@ export const portfolioImages = {
 
 export const projects = [
   {
+    id: 'teacherflow',
+    name: 'TeacherFlow',
+    status: 'Engineering foundation complete',
+    technologies: [
+      'React',
+      'TypeScript',
+      'Vite',
+      'Express',
+      'Prisma',
+      'PostgreSQL',
+      'Vitest',
+    ],
+    purpose:
+      'Lay a reliable foundation for a teacher productivity application designed to reduce repetitive grading, documentation, gradebook, and family-communication work.',
+    description:
+      'TeacherFlow is planned around a fast grading workflow: select or scan an assignment, scan a student identifier, grade, add feedback, save, and continue. The current implementation intentionally stops at the engineering foundation so future classroom features can be added through focused specifications instead of speculative code.',
+    image: portfolioImages.experience,
+    stages: [
+      {
+        label: 'Problem',
+        detail:
+          'Grading physical student work can require repeated searching, data entry, documentation, and gradebook preparation that take time away from instruction.',
+      },
+      {
+        label: 'Investigation',
+        detail:
+          'The workflow was broken into client, API, persistence, testing, and privacy concerns, with the grading loop identified as the first product priority.',
+      },
+      {
+        label: 'Obstacle',
+        detail:
+          'The long-term product includes many related classroom needs, creating a risk of building domain models and integrations before the primary grading workflow is understood and tested.',
+      },
+      {
+        label: 'Decision',
+        detail:
+          'Build an infrastructure-only monorepo first and require focused feature specifications before adding student, assignment, rubric, scanning, messaging, or analytics behavior.',
+      },
+      {
+        label: 'Implementation',
+        detail:
+          'The foundation uses npm workspaces with a responsive React and TypeScript client, an Express API, centralized request handling, PostgreSQL-ready Prisma tooling, environment validation, and starter client and server tests.',
+      },
+      {
+        label: 'Verification',
+        detail:
+          'The current checkout passes client and server builds, lint, one client test, and two API tests. The health endpoint returns only an operational status and does not require a database connection.',
+      },
+      {
+        label: 'Lesson',
+        detail:
+          'Protecting the core workflow sometimes means choosing a smaller verified foundation over a larger collection of unfinished features.',
+      },
+    ],
+  },
+  {
     id: 'accessible-to-all',
     name: 'Accessible to All Portfolio',
     status: 'In active development',
