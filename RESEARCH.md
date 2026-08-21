@@ -12,3 +12,15 @@
 - **Final asset:** `public/images/dragonfly-logo.png`
 
 This generated mark is a branding asset. It is not presented as evidence of a completed project, employer, credential, award, or coding result.
+
+## Home Page Editorial Images
+
+- **Date:** August 21, 2026
+- **Tool:** OpenAI built-in image generator
+- **Project use:** Home introduction and skill-section illustrations
+- **Prompt purpose:** Visually connect adaptive problem-solving with software development, English education, and stage management through abstract editorial metaphors.
+- **Important constraints:** No people, readable interface text, logos, employer marks, credentials, watermarks, or false project evidence.
+- **Visual direction:** Handmade editorial texture using the portfolio's teal, mist, gold, olive, and blush palette.
+- **Final assets:** `public/images/home/problem-solving-path.jpg` and `public/images/home/connected-strengths.jpg`
+
+These images communicate themes and working style. They are not presented as evidence of a completed project, employer, credential, award, or coding result.
