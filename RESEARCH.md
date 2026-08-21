@@ -24,3 +24,15 @@ This generated mark is a branding asset. It is not presented as evidence of a co
 - **Final assets:** `public/images/home/problem-solving-path.jpg` and `public/images/home/connected-strengths.jpg`
 
 These images communicate themes and working style. They are not presented as evidence of a completed project, employer, credential, award, or coding result.
+
+## Portfolio Page Editorial Images
+
+- **Date:** August 21, 2026
+- **Tool:** OpenAI built-in image generator
+- **Project use:** Featured Projects introduction and project case-study framing
+- **Prompt purpose:** Show the path from a real need through investigation, decisions, building, verification, and reflection; connect software development, education, and backstage coordination as complementary problem-solving practices.
+- **Important constraints:** No people, readable text, logos, employer or school marks, credentials, awards, interface screenshots, watermarks, or false project evidence.
+- **Visual direction:** Wide handmade editorial collages using teal, mist, gold, olive, and blush with subtle dragonfly motifs.
+- **Final assets:** `public/images/portfolio/problem-solving-journey.webp` and `public/images/portfolio/cross-disciplinary-work.webp`
+
+These illustrations support the portfolio narrative. They are not screenshots or evidence of completed project behavior.

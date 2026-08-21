@@ -3,15 +3,11 @@ import MainLayout from './layouts/MainLayout.jsx'
 import PagePlaceholder from './components/PagePlaceholder.jsx'
 import usePresentationMode from './hooks/usePresentationMode.js'
 import HomePage from './pages/HomePage.jsx'
+import PortfolioPage from './pages/PortfolioPage.jsx'
 import WelcomePortal from './pages/WelcomePortal.jsx'
 import { publicViewIds } from './data/navigation.js'
 
 const placeholderViews = {
-  portfolio: {
-    eyebrow: 'Portfolio',
-    title: 'Featured Projects',
-    description: 'Interactive project stories, education, work experience, and a downloadable resume will live here.',
-  },
   skills: {
     eyebrow: 'Experience',
     title: 'Skills and Experience',
@@ -61,6 +57,10 @@ function App() {
 
     if (activeView === 'home') {
       return <HomePage />
+    }
+
+    if (activeView === 'portfolio') {
+      return <PortfolioPage />
     }
 
     const view = placeholderViews[activeView] ?? placeholderViews.about
