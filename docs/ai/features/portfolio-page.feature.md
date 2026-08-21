@@ -114,24 +114,25 @@ No database or API interface is required.
 
 ## 9. AI Image Record
 
-- Status: pending generation after verified portfolio content is assembled.
+- Status: generated and integrated on August 21, 2026.
 - Tool: OpenAI built-in image generator.
-- Required outputs: at least two complementary editorial images for section framing or decoration.
-- Constraints: no text, institutional or employer marks, credentials, fabricated interfaces, false project screenshots, awards, or watermarks.
-- Final prompts, date, filenames, usage, and alternative text must be recorded here and in `RESEARCH.md`.
+- Outputs: `public/images/portfolio/problem-solving-journey.webp` and `public/images/portfolio/cross-disciplinary-work.webp`.
+- Prompt purpose: illustrate a thoughtful problem-solving journey and the connection between development, education, and backstage coordination.
+- Constraints: no people, readable text, institutional or employer marks, credentials, fabricated interfaces, false project screenshots, awards, or watermarks.
+- Usage and alternative text are recorded in `src/data/portfolioData.js` and `RESEARCH.md`.
 
 ## 10. Acceptance Criteria
 
 - [x] Work is performed on `feature/portfolio-page`, created from synchronized `dev`.
 - [x] The global specification and this feature specification were reviewed before implementation.
 - [ ] Education includes at least one verified institution, program, and date range in reverse chronological order.
-- [ ] Work experience includes at least one verified role, organization, dates, and responsibility or achievement description in reverse chronological order.
-- [ ] Projects include at least one verified name, technology or medium, purpose, description, and image.
-- [ ] Project content explains problem-solving decisions where supporting facts are available.
-- [ ] A final resume PDF is available through a working, clearly labelled download.
-- [ ] Education, work, and projects appear as three distinct visual sections.
-- [ ] At least two relevant AI-generated images are present, accessible, optimized, and documented.
-- [ ] Simple, Corporate, and Dramatic modes present identical facts and functionality.
+- [x] Work experience includes at least one verified role, organization, dates, and responsibility or achievement description in reverse chronological order.
+- [x] Projects include at least one verified name, technology or medium, purpose, description, and image.
+- [x] Project content explains problem-solving decisions where supporting facts are available.
+- [x] A final resume PDF is available through a working, clearly labelled download.
+- [x] Education, work, and projects appear as three distinct visual sections.
+- [x] At least two relevant AI-generated images are present, accessible, optimized, and documented.
+- [x] Simple, Corporate, and Dramatic modes present identical facts and functionality.
 - [ ] Keyboard, focus, heading, image-alternative, reduced-motion, and PDF-link behavior are verified.
 - [ ] Desktop, 768px, 320px, and 200% zoom-equivalent reflow checks pass without horizontal overflow.
 - [ ] Browser console has no known errors in required flows.
