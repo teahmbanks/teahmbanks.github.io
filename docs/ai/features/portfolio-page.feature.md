@@ -121,7 +121,17 @@ No database or API interface is required.
 - Constraints: no people, readable text, institutional or employer marks, credentials, fabricated interfaces, false project screenshots, awards, or watermarks.
 - Usage and alternative text are recorded in `src/data/portfolioData.js` and `RESEARCH.md`.
 
-## 10. Acceptance Criteria
+## 10. Verification Record
+
+- Date: August 21, 2026.
+- Presentation parity: Simple, Corporate, and Dramatic each rendered the same two project case studies, four experience/education entries, meaningful image alternatives, and PDF download.
+- Responsive reflow: 1280px, 768px, 640px (200%-zoom equivalent), and 320px browser checks had matching viewport and document widths with all project and experience cards inside the viewport.
+- Accessibility contracts: one page-level heading, logical section and card headings, meaningful image alternatives, a native PDF download link, visible focus styling, and reduced-motion overrides are present.
+- Resume: the public PDF URL returned HTTP 200 with `application/pdf`.
+- Browser console: no errors were captured in the required Featured Projects flow.
+- Code quality: `npm run lint`, `npm run build`, and `git diff --check` passed after implementation.
+
+## 11. Acceptance Criteria
 
 - [x] Work is performed on `feature/portfolio-page`, created from synchronized `dev`.
 - [x] The global specification and this feature specification were reviewed before implementation.
@@ -133,7 +143,7 @@ No database or API interface is required.
 - [x] Education, work, and projects appear as three distinct visual sections.
 - [x] At least two relevant AI-generated images are present, accessible, optimized, and documented.
 - [x] Simple, Corporate, and Dramatic modes present identical facts and functionality.
-- [ ] Keyboard, focus, heading, image-alternative, reduced-motion, and PDF-link behavior are verified.
-- [ ] Desktop, 768px, 320px, and 200% zoom-equivalent reflow checks pass without horizontal overflow.
-- [ ] Browser console has no known errors in required flows.
-- [ ] `npm run lint`, `npm run build`, and `git diff --check` pass.
+- [x] Keyboard, focus, heading, image-alternative, reduced-motion, and PDF-link behavior are verified.
+- [x] Desktop, 768px, 320px, and 200% zoom-equivalent reflow checks pass without horizontal overflow.
+- [x] Browser console has no known errors in required flows.
+- [x] `npm run lint`, `npm run build`, and `git diff --check` pass.
