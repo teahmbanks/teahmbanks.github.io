@@ -42,10 +42,19 @@ Create a clear resource page with at least three verified external links that he
 
 - [x] Work begins on `feature/links-page` from synchronized `dev`.
 - [x] The global and feature specifications are reviewed before implementation.
-- [ ] At least three verified resource cards include an image, title, description, and external URL.
-- [ ] New-tab behavior is visible, announced, and uses safe link attributes.
-- [ ] Simple, Corporate, and Dramatic modes present identical content and functionality.
-- [ ] Heading, list, image-alternative, focus, and reduced-motion behavior are verified.
-- [ ] Desktop, 768px, 320px, and 200% zoom-equivalent reflow checks pass.
-- [ ] The browser console has no known errors in required flows.
-- [ ] `npm run lint`, `npm run build`, and `git diff --check` pass.
+- [x] At least three verified resource cards include an image, title, description, and external URL.
+- [x] New-tab behavior is visible, announced, and uses safe link attributes.
+- [x] Simple, Corporate, and Dramatic modes present identical content and functionality.
+- [x] Heading, list, image-alternative, focus, and reduced-motion behavior are verified.
+- [x] Desktop, 768px, 320px, and 200% zoom-equivalent reflow checks pass.
+- [x] The browser console has no known errors in required flows.
+- [x] `npm run lint`, `npm run build`, and `git diff --check` pass.
+
+## 7. Verification record
+
+- Date: August 21, 2026.
+- Presentation parity: every mode rendered three matching resource cards with meaningful image alternatives and safe external links.
+- Link contract: all resource URLs use HTTPS, open in a new tab, include `noreferrer`, visibly show an external-link arrow, and announce the new tab to assistive technology.
+- Responsive reflow: 1280px, 768px, 640px (200%-zoom equivalent), and 320px checks had matching viewport and document widths with cards and the page heading inside the viewport.
+- Browser console: no errors were captured in the Links flow.
+- Code quality: `npm run lint`, `npm run build`, and `git diff --check` passed after implementation.
