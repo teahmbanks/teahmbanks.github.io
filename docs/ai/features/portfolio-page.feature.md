@@ -125,7 +125,7 @@ No database or API interface is required.
 
 - [x] Work is performed on `feature/portfolio-page`, created from synchronized `dev`.
 - [x] The global specification and this feature specification were reviewed before implementation.
-- [ ] Education includes at least one verified institution, program, and date range in reverse chronological order.
+- [x] Education includes at least one verified institution, program, and date in reverse chronological order.
 - [x] Work experience includes at least one verified role, organization, dates, and responsibility or achievement description in reverse chronological order.
 - [x] Projects include at least one verified name, technology or medium, purpose, description, and image.
 - [x] Project content explains problem-solving decisions where supporting facts are available.

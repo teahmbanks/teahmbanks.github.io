@@ -145,7 +145,7 @@ export const education = [
     id: 'usf',
     institution: 'University of South Florida',
     program: 'Bachelor of Arts, English Creative Writing',
-    dates: 'Graduation date not listed on resume',
+    dates: '2016',
   },
 ]
 
