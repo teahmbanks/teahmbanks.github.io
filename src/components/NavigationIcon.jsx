@@ -1,4 +1,5 @@
 const iconPaths = {
+  home: ['M3 11.5 12 4l9 7.5', 'M5.5 10v10h13V10', 'M9.5 20v-6h5v6'],
   portal: ['M4 4h16v16H4z', 'M9 4v16', 'M13 12h4', 'm15 10 2 2-2 2'],
   projects: ['M4 7h16v12H4z', 'M9 7V5h6v2', 'M4 12h16', 'M10 12v2h4v-2'],
   skills: ['M12 3v18', 'M5 8h14', 'M7 16h10', 'M8 5h8', 'M9 19h6'],
