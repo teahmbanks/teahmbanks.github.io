@@ -6,6 +6,10 @@ export const portfolioIntroduction = {
 }
 
 export const portfolioImages = {
+  hero: {
+    src: '/images/portfolio/problem-to-solution-banner.webp',
+    alt: 'Abstract journey from tangled questions and investigative lines to a carefully constructed golden pathway',
+  },
   problemSolving: {
     src: '/images/portfolio/problem-solving-journey.webp',
     alt: 'Editorial illustration of a winding problem-solving path connecting investigation, building, testing, and reflection',
