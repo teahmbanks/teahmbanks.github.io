@@ -29,7 +29,7 @@ Allow the authenticated portfolio owner to privately review and delete contact m
 - Use one `h1`, semantic table headings on wide screens, and readable responsive cards on narrow screens.
 - Give the modal an accessible name, move focus inside, trap Tab, close with Escape or outside click, and restore trigger focus.
 - Announce loading, errors, deletion results, and empty state.
-- Keep behavior and content equivalent in Simple, Corporate, and Dramatic modes.
+- Keep behavior and content consistent with the Dramatic presentation.
 
 ## 5. Security contract
 
@@ -48,6 +48,6 @@ Allow the authenticated portfolio owner to privately review and delete contact m
 - [ ] Modal keyboard behavior, accessible naming, outside close, and focus return are verified.
 - [ ] Delete confirmation, success, and failure behavior are verified.
 - [ ] Logout ends the Supabase session and returns to Login.
-- [ ] Desktop, mobile, reduced-motion, and all presentation modes are verified. The 320px protected error state passes without overflow.
+- [ ] Desktop, mobile, reduced-motion, and Dramatic presentation behavior are verified. The 320px protected error state passes without overflow.
 - [ ] Live select/delete behavior and RLS are verified with configured Supabase infrastructure.
 - [x] `npm run lint`, `npm run build`, and `git diff --check` pass.

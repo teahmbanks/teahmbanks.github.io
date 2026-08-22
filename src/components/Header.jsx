@@ -25,7 +25,7 @@ function NavigationList({ activeView, mobile = false, onNavigate }) {
 }
 
 /** Provides consistent public branding and navigation at every viewport. */
-function Header({ activeView, onNavigate, presentationMode }) {
+function Header({ activeView, onNavigate }) {
   return (
     <header className="site-header">
       <div className="site-header__inner">
@@ -49,10 +49,6 @@ function Header({ activeView, onNavigate, presentationMode }) {
             <span>Accessible to All</span>
           </span>
         </a>
-
-        <span className="presentation-badge" aria-label={`Current presentation: ${presentationMode}`}>
-          {presentationMode}
-        </span>
 
         <nav aria-label="Primary navigation" className="desktop-navigation">
           <NavigationList activeView={activeView} onNavigate={onNavigate} />

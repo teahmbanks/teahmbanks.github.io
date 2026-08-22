@@ -20,6 +20,16 @@ function ProjectCaseStudy({ project }) {
         </div>
         <p className="project-case-study__purpose">{project.purpose}</p>
         <p>{project.description}</p>
+        {project.repository && (
+          <a
+            className="text-link"
+            href={project.repository.href}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            {project.repository.label} <span className="visually-hidden">(opens in a new tab)</span>
+          </a>
+        )}
         <ul className="technology-list" aria-label={`${project.name} technologies`}>
           {project.technologies.map((technology) => <li key={technology}>{technology}</li>)}
         </ul>

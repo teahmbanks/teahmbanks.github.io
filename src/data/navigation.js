@@ -1,12 +1,6 @@
 /** Public navigation is defined once so desktop and mobile orders cannot drift. */
 export const publicNavigation = [
   {
-    id: 'welcome',
-    label: 'Welcome Portal',
-    shortLabel: 'Portal',
-    icon: 'portal',
-  },
-  {
     id: 'portfolio',
     label: 'Featured Projects',
     shortLabel: 'Projects',

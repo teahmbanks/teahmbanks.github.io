@@ -1,4 +1,4 @@
-/** Centralizes verified Home content so every presentation mode tells one story. */
+/** Centralizes verified Home content for one consistent professional story. */
 export const homeIntroduction = {
   name: 'Teah Banks',
   tagline: 'Developer, educator, and adaptive problem-solver',

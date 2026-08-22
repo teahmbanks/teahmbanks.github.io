@@ -10,7 +10,7 @@
 
 ### Product statement
 
-Build a public, responsive personal portfolio that adapts its presentation to the visitor without changing the substance of the portfolio owner's professional story. The opening Welcome Portal asks each visitor to choose one of three visual paths - **Simple**, **Corporate**, or **Dramatic** - and then presents the same content, navigation, functionality, and accessibility in the selected style.
+Build a public, responsive personal portfolio with one focused **Dramatic** presentation that supports the portfolio owner's professional story without placing a style-selection step between the visitor and the content.
 
 The experience should communicate that the portfolio owner is a developer, educator, stage manager, and naturally adaptive problem-solver who meets people where they are. The site may be expressive, but it must never make a visitor work harder to understand or use it.
 
@@ -23,12 +23,12 @@ The experience should communicate that the portfolio owner is a developer, educa
 
 ### Brand promise
 
-**One portfolio. Three presentation styles. Equal access to the same information.**
+**A dramatic portfolio built around thoughtful problem-solving.**
 
 ### Core principles
 
 1. **Accessible by default:** semantic structure, keyboard access, readable content, visible focus, clear feedback, and sufficient contrast are baseline requirements.
-2. **Choice without penalty:** the three visual paths change presentation, not content, capability, or information hierarchy.
+2. **Direct access:** visitors enter the Home experience immediately without a presentation-selection gate.
 3. **Personal but professional:** theater, education, stage management, and software development should form one coherent career story.
 4. **Progressive enhancement:** essential content remains readable and usable if animations, decorative images, or Supabase are unavailable.
 5. **Evidence over invention:** do not fabricate biography details, job dates, education, project outcomes, links, metrics, testimonials, or skills. Use clearly labeled placeholders until the portfolio owner supplies verified content.
@@ -39,18 +39,16 @@ The experience should communicate that the portfolio owner is a developer, educa
 
 - A React application scaffolded with Vite and written in JavaScript.
 - A single-page public portfolio hosted at `https://username.github.io`.
-- A Welcome Portal that lets visitors choose Simple, Corporate, or Dramatic presentation.
 - Public navigation in this exact order:
-  1. Welcome Portal
-  2. Featured Projects
-  3. Skills and Experience
-  4. About Me
-  5. Contact
-  6. Links
+  1. Featured Projects
+  2. Skills and Experience
+  3. About Me
+  4. Contact
+  5. Links
 - An introduction containing the portfolio owner's name, role/title or tagline, and a short professional summary.
 - Technical skills and soft skills/talents, each with supporting text and meaningful icons.
 - Education, work experience, project experience, and a downloadable resume PDF.
-- Featured interactive project presentations, initially planned around Stage Space, the teacher application, and one additional verified project.
+- Featured project case studies for StageSpace, CodeBloggs, and Rocket Food Delivery.
 - A contact form that stores messages in Supabase.
 - A secret Supabase-authenticated login view and protected Back Office for reading and deleting messages.
 - An AI-generated personal logo and the required AI-generated imagery, all documented and supplied with appropriate alternative text.
@@ -64,7 +62,7 @@ The experience should communicate that the portfolio owner is a developer, educa
 - Public account registration, visitor accounts, password reset, or multiple admin roles.
 - Public access to stored messages.
 - A CMS, blog, e-commerce, analytics tracking, or newsletter system unless later approved as a separately scoped enhancement.
-- Different facts, projects, links, or capabilities between the three visual paths.
+- Additional presentation modes until the Dramatic experience and required features are complete and reviewed.
 - Unapproved languages, frameworks, or major libraries introduced only for visual effects.
 - The optional light/dark mode and multilingual extra miles until all required features are complete and reviewed.
 
@@ -104,25 +102,10 @@ The public experience remains at the root URL. It behaves like a single-page por
 
 The browser Back button must behave predictably if history state is used. Refreshing the root URL must always render a valid public experience.
 
-### Welcome Portal flow
+### Dramatic presentation
 
-1. A first-time visitor lands on the Welcome Portal at `/`.
-2. The page welcomes the visitor and explains that every path contains the same information.
-3. The visitor selects Simple, Corporate, or Dramatic.
-4. The selection is stored locally and the visitor enters the introduction experience.
-5. Returning visitors may resume their stored choice, but the Welcome Portal remains available as the first navigation item.
-6. A visitor can change presentation paths at any time from the Welcome Portal.
-
-Do not use path choice as a gate. Include a clear default/continue option, and render a usable default if local storage is unavailable.
-
-### Presentation modes
-
-All modes must use the same semantic DOM structure wherever practical. Prefer root-level data attributes or classes and CSS custom properties over three separate component trees.
-
-#### Simple
-
-- Minimal decoration and animation.
-- High readability, generous spacing, straightforward cards or lists.
+- Apply `dramatic` to the root `data-presentation-mode` attribute on every public and private view.
+- Do not render a presentation selector or store presentation choice in local storage.
 - Best choice for visitors who want essential information quickly.
 
 #### Corporate
@@ -139,14 +122,13 @@ All modes must use the same semantic DOM structure wherever practical. Prefer ro
 
 ### Public content mapping
 
-- **Welcome Portal:** presentation choice and explanation of the accessible-to-all concept.
 - **Featured Projects:** education, work experience, project portfolio, project interactions, project images, and downloadable resume.
 - **Skills and Experience:** at least three technical skills and at least three soft skills/talents, with icons and explanatory text; include experience from software development, education, and stage management.
 - **About Me:** the portfolio owner's journey through theater and education and the motivation for entering programming.
 - **Contact:** LinkedIn access plus the Supabase-backed message form.
 - **Links:** at least three useful resource cards with image, title, short description, and external URL.
 
-The root/home experience must still satisfy the rubric's Home page requirements. After a presentation is selected, the introduction, technical-skills, and soft-skills sections must be directly available in the root experience even when navigation controls focus or scroll to individual sections.
+The root/home experience must satisfy the rubric's Home page requirements. The introduction, technical-skills, and soft-skills sections must be directly available at the root experience.
 
 ### Secret administrative views
 
@@ -185,7 +167,7 @@ Not every color must appear in every path. Assign colors through semantic CSS va
 - Body copy must remain comfortably readable at 200% zoom and on narrow screens.
 - Voice should be warm, capable, adaptive, direct, and human.
 - Use plain language and short, concrete explanations. Avoid generic claims such as "passionate developer" unless supported by specific examples.
-- Preserve the same factual content in every presentation mode.
+- Keep the Dramatic presentation readable, responsive, and accessible.
 
 ### Required imagery
 
@@ -269,11 +251,11 @@ username.github.io/
 └── vite.config.js
 ```
 
-Structure code by responsibility. Reusable navigation, cards, form controls, feedback, modal behavior, and presentation-mode logic belong in focused components or hooks. Static portfolio content should live in structured data modules rather than being duplicated across three mode-specific pages.
+Structure code by responsibility. Reusable navigation, cards, form controls, feedback, and modal behavior belong in focused components or hooks. Static portfolio content should live in structured data modules.
 
 ### State boundaries
 
-- Keep presentation choice in one shared source of truth and persist it in `localStorage` using a versioned key.
+- Keep the Dramatic presentation centralized through the root data attribute and shared CSS tokens.
 - Keep public active-section state separate from authentication state.
 - Treat the Supabase session as the authority for Back Office access.
 - Do not store admin passwords, message data, or sensitive session details manually in local storage.
@@ -435,9 +417,9 @@ The contact payload includes only `name`, `email`, and `message`. Do not trust c
 These rules apply to every feature specification and implementation:
 
 1. The Requirement Checklist is the grading authority.
-2. Public navigation order is fixed and identical in desktop and mobile presentations.
+2. Public navigation order is fixed and identical on desktop and mobile.
 3. Login and Back Office are never exposed through public navigation.
-4. Simple, Corporate, and Dramatic contain identical facts and functionality.
+4. Dramatic is the only active presentation.
 5. Shared content is stored once and rendered through reusable components.
 6. Every async action has loading, success or empty, and failure behavior as applicable.
 7. Every new interaction is keyboard operable and has an accessible name.
@@ -458,12 +440,12 @@ The project is globally done only when all of the following are true:
 
 - This global spec and all eight required feature specs exist in the required locations and were used during implementation.
 - No unresolved placeholder, invented biography, invalid color value, or undocumented requirement conflict remains.
-- All public content is accurate, proofread, and consistent across presentation modes.
+- All public content is accurate, proofread, and consistent throughout the site.
 - The downloadable resume is final and LinkedIn updates are summarized and linked in the README Author section.
 
 ### Functional behavior
 
-- Welcome Portal selection and switching work in all three modes.
+- The root URL opens the Home experience directly in Dramatic mode.
 - Home/root, Featured Projects, Skills and Experience, About Me, Contact, and Links satisfy their mapped rubric requirements.
 - Contact form validation, Supabase insert, feedback, and fallback behavior are verified.
 - Secret login, session persistence, protected Back Office, message listing, modal viewing, deletion, and logout are verified.
@@ -476,7 +458,7 @@ The project is globally done only when all of the following are true:
 - `npm run build` completes successfully.
 - There are no known console errors in required user flows.
 - Keyboard-only, focus order, modal focus, screen-reader naming, contrast, reduced motion, 200% zoom, and responsive overflow checks pass.
-- Required flows are manually checked on desktop and mobile-sized viewports, including all three presentation paths.
+- Required flows are manually checked on desktop and mobile-sized viewports.
 - Empty, misconfigured, unauthenticated, invalid-input, and Supabase-failure states are verified.
 
 ### Delivery

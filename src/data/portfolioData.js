@@ -18,96 +18,140 @@ export const portfolioImages = {
 
 export const projects = [
   {
-    id: 'teacherflow',
-    name: 'TeacherFlow',
-    status: 'Engineering foundation complete',
+    id: 'stagespace',
+    name: 'StageSpace',
+    status: 'Authentication foundation connected',
     technologies: [
       'React',
-      'TypeScript',
       'Vite',
       'Express',
-      'Prisma',
-      'PostgreSQL',
-      'Vitest',
+      'MongoDB',
+      'Mongoose',
+      'JWT',
     ],
     purpose:
-      'Lay a reliable foundation for a teacher productivity application designed to reduce repetitive grading, documentation, gradebook, and family-communication work.',
+      'Create one calm digital backstage where theater companies can organize productions, departments, schedules, reports, calls, and notes.',
     description:
-      'TeacherFlow is planned around a fast grading workflow: select or scan an assignment, scan a student identifier, grade, add feedback, save, and continue. The current implementation intentionally stops at the engineering foundation so future classroom features can be added through focused specifications instead of speculative code.',
+      'StageSpace brings my theater-production experience into a full-stack application. Its current foundation includes public and protected routes, account creation and sign-in, company and production views, backstage hubs, and department workspaces ready for deeper production tools.',
     image: portfolioImages.experience,
+    repository: {
+      href: 'https://github.com/teahmbanks/Personal-project--Theater-website',
+      label: 'View StageSpace on GitHub',
+    },
     stages: [
       {
         label: 'Problem',
         detail:
-          'Grading physical student work can require repeated searching, data entry, documentation, and gradebook preparation that take time away from instruction.',
+          'Production information is often scattered across messages, calendars, documents, and department-specific systems, making it difficult for a company to maintain one reliable source of truth.',
       },
       {
         label: 'Investigation',
         detail:
-          'The workflow was broken into client, API, persistence, testing, and privacy concerns, with the grading loop identified as the first product priority.',
-      },
-      {
-        label: 'Obstacle',
-        detail:
-          'The long-term product includes many related classroom needs, creating a risk of building domain models and integrations before the primary grading workflow is understood and tested.',
+          'I mapped the work around company profiles, production rooms, backstage communication, and the different information needs of stage management, props, costumes, lighting, and other departments.',
       },
       {
         label: 'Decision',
         detail:
-          'Build an infrastructure-only monorepo first and require focused feature specifications before adding student, assignment, rubric, scanning, messaging, or analytics behavior.',
+          'Start with secure identity and navigation first, then use realistic mock production data to test the information architecture before expanding the backend domain model.',
       },
       {
         label: 'Implementation',
         detail:
-          'The foundation uses npm workspaces with a responsive React and TypeScript client, an Express API, centralized request handling, PostgreSQL-ready Prisma tooling, environment validation, and starter client and server tests.',
-      },
-      {
-        label: 'Verification',
-        detail:
-          'The current checkout passes client and server builds, lint, one client test, and two API tests. The health endpoint returns only an operational status and does not require a database connection.',
+          'The React client uses protected routing and reusable company, production, and department views. The Express API uses MongoDB, Mongoose, password hashing, JWT authentication, and protected user endpoints.',
       },
       {
         label: 'Lesson',
         detail:
-          'Protecting the core workflow sometimes means choosing a smaller verified foundation over a larger collection of unfinished features.',
+          'A complex collaboration product becomes easier to build when permissions, navigation, and shared vocabulary are established before adding every requested tool.',
       },
     ],
   },
   {
-    id: 'accessible-to-all',
-    name: 'Accessible to All Portfolio',
-    status: 'In active development',
-    technologies: ['React', 'Vite', 'JavaScript', 'CSS', 'GitHub Pages'],
+    id: 'codebloggs',
+    name: 'CodeBloggs',
+    status: 'Full-stack coursework project',
+    technologies: ['React', 'Redux', 'Express', 'MongoDB', 'Selenium IDE', 'Lighthouse'],
     purpose:
-      'Create one accessible professional portfolio that can adapt its visual presentation without changing its facts or functionality.',
+      'Build a social blogging application where developers can connect, publish ideas, discuss posts, and manage their profiles.',
     description:
-      'This portfolio brings my development, education, and stage-management experience into one clear professional story. Visitors choose a Simple, Corporate, or Dramatic presentation while receiving the same content and accessible navigation.',
+      'CodeBloggs is a full-stack social platform with registration, session-based authentication, posts, comments, replies, likes, user networking, account settings, and administrative interfaces. Later work strengthened the project through Lighthouse audits and a repeatable Selenium test suite.',
     image: portfolioImages.problemSolving,
+    repository: {
+      href: 'https://github.com/teahmbanks/Module-15',
+      label: 'View CodeBloggs on GitHub',
+    },
     stages: [
       {
         label: 'Problem',
         detail:
-          'A single visual style cannot anticipate every visitor’s preferences, but separate websites would make the content difficult to maintain consistently.',
+          'A social application must coordinate identity, content ownership, conversation threads, and administrative control without making everyday interactions feel complicated.',
       },
       {
         label: 'Investigation',
         detail:
-          'The requirements were translated into shared navigation, structured content, responsive behavior, and presentation tokens that can change appearance without duplicating the page.',
+          'I worked across the React client, Redux state, Express routes, MongoDB models, authentication, validation, and the relationships between posts, comments, replies, and users.',
       },
       {
         label: 'Decision',
         detail:
-          'Use one semantic React structure and CSS custom properties for all three presentation modes so choice changes the experience, not the information.',
+          'Use reusable service and state patterns for the application, then audit the most important routes with Lighthouse and automate core browser flows with Selenium IDE.',
       },
       {
-        label: 'Verification so far',
+        label: 'Verification',
         detail:
-          'The shared layout and Home experience pass local lint and production-build checks. Portfolio implementation and responsive verification are continuing on this feature branch.',
+          'The Module 15 work includes documented Login and Home audits, an external benchmark, and a Firefox-compatible Selenium IDE suite containing ten tests.',
       },
       {
         label: 'Lesson',
         detail:
-          'Accessibility becomes more dependable when it shapes the component and content architecture from the beginning rather than being added after the design is finished.',
+          'Measurement and repeatable tests turn a working application into evidence that performance, accessibility, and critical user paths can be maintained.',
+      },
+    ],
+  },
+  {
+    id: 'rocket-food-delivery',
+    name: 'Rocket Food Delivery',
+    status: 'Full-stack mobile coursework project',
+    technologies: ['Java', 'Spring Boot', 'MySQL', 'Expo', 'React Native', 'JWT'],
+    purpose:
+      'Connect customers, couriers, restaurants, and administrators through one food-ordering and delivery system.',
+    description:
+      'Rocket Food Delivery combines a Spring Boot REST API and administrative back office with an Expo mobile application. It supports role-aware customer and courier experiences, restaurant ordering, delivery management, account tools, order history, and optional notification preferences.',
+    image: portfolioImages.experience,
+    repository: {
+      href: 'https://github.com/teahmbanks/Module-14',
+      label: 'View Rocket Food Delivery on GitHub',
+    },
+    stages: [
+      {
+        label: 'Problem',
+        detail:
+          'Customers and couriers need different views of the same order, while the backend must keep authentication, status changes, restaurant data, and delivery actions consistent.',
+      },
+      {
+        label: 'Investigation',
+        detail:
+          'I traced the complete journey across the mobile navigation, REST endpoints, database entities, authentication layers, order lifecycle, and back-office operations.',
+      },
+      {
+        label: 'Obstacle',
+        detail:
+          'The mobile client, local backend, physical devices, and third-party notification providers all have different runtime and configuration requirements.',
+      },
+      {
+        label: 'Decision',
+        detail:
+          'Centralize API communication, preserve role-aware sessions, and keep optional email and SMS providers behind backend services so the core ordering workflow remains understandable.',
+      },
+      {
+        label: 'Implementation',
+        detail:
+          'The backend uses Spring Boot, Spring Security, JWT, JPA, and MySQL. The Expo client uses file-based routing, shared services, persisted session state, customer tabs, and courier delivery tools.',
+      },
+      {
+        label: 'Lesson',
+        detail:
+          'Cross-platform systems are easier to debug when network boundaries, response shapes, roles, and provider-dependent behavior are documented explicitly.',
       },
     ],
   },
