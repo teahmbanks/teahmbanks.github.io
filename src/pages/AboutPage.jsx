@@ -6,11 +6,6 @@ function AboutPage() {
   return (
     <div className="about-page">
       <section className="about-hero" aria-labelledby="view-heading">
-        <div className="about-hero__content">
-          <p className="page-panel__eyebrow">{aboutIntroduction.eyebrow}</p>
-          <h1 id="view-heading" tabIndex="-1">{aboutIntroduction.title}</h1>
-          <p className="page-panel__lead">{aboutIntroduction.summary}</p>
-        </div>
         <img
           alt={homeImages.connectedStrengths.alt}
           className="about-hero__image"
@@ -18,6 +13,11 @@ function AboutPage() {
           src={homeImages.connectedStrengths.src}
           width="1536"
         />
+        <div className="about-hero__content">
+          <p className="page-panel__eyebrow">{aboutIntroduction.eyebrow}</p>
+          <h1 id="view-heading" tabIndex="-1">{aboutIntroduction.title}</h1>
+          <p className="page-panel__lead">{aboutIntroduction.summary}</p>
+        </div>
       </section>
 
       <section className="about-section" aria-labelledby="journey-heading">
