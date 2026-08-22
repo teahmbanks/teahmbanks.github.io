@@ -1,15 +1,21 @@
+import ProjectPreview from './ProjectPreview.jsx'
+
 /** Presents a verified project as a problem-solving story. */
 function ProjectCaseStudy({ project }) {
   return (
     <article className="project-case-study">
-      <img
-        alt={project.image.alt}
-        className="project-case-study__image"
-        height="1024"
-        loading="lazy"
-        src={project.image.src}
-        width="1536"
-      />
+      {project.preview ? (
+        <ProjectPreview preview={project.preview} projectName={project.name} />
+      ) : (
+        <img
+          alt={project.image.alt}
+          className="project-case-study__image"
+          height="1024"
+          loading="lazy"
+          src={project.image.src}
+          width="1536"
+        />
+      )}
       <div className="project-case-study__content">
         <div className="project-case-study__heading">
           <div>
