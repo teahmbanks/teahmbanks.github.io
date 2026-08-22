@@ -1,6 +1,6 @@
 # Feature Specification - Shared Layout, Header, Footer, and Dramatic Presentation
 
-> Use this specification together with `docs/ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
+> Use this specification together with `ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
 
 ## 1. Feature Goal
 
@@ -120,12 +120,12 @@ Each shared item contains:
 
 Navigation definitions must be stored once and rendered by both desktop and mobile navigation.
 
-### Presentation-mode validation
+### Presentation validation
 
-- Accept only the three documented mode strings.
-- Ignore unknown stored values.
-- Catch local-storage read/write failures without breaking rendering.
-- Do not store personal data, message content, or authentication data with the presentation preference.
+- Apply the single documented `dramatic` value at the application root.
+- Do not require local storage or expose a presentation selector.
+- The navigation list is the single source of truth for desktop and mobile rendering.
+- Do not associate personal data, message content, or authentication data with presentation styling.
 
 ## 7. Expected and Failure Behavior
 

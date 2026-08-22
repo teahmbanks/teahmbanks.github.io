@@ -83,14 +83,14 @@ Do not silently choose between conflicting requirements. Record the conflict and
 
 The global spec must be used together with these eight feature documents before implementation:
 
-- `docs/ai/features/setup-deploy.feature.md`
-- `docs/ai/features/header-footer.feature.md`
-- `docs/ai/features/home-page.feature.md`
-- `docs/ai/features/portfolio-page.feature.md`
-- `docs/ai/features/link-page.feature.md`
-- `docs/ai/features/contact-page.feature.md`
-- `docs/ai/features/login-page.feature.md`
-- `docs/ai/features/back-office.feature.md`
+- `ai/features/setup-deploy.feature.md`
+- `ai/features/header-footer.feature.md`
+- `ai/features/home-page.feature.md`
+- `ai/features/portfolio-page.feature.md`
+- `ai/features/link-page.feature.md`
+- `ai/features/contact-page.feature.md`
+- `ai/features/login-page.feature.md`
+- `ai/features/back-office.feature.md`
 
 Each feature document must define its goal; in-scope and out-of-scope behavior; requirements and user flow; pages, components, and external interfaces; data and validation; expected behavior; accessibility considerations; responsive behavior; failure and empty states; and testable acceptance criteria.
 
@@ -106,16 +106,6 @@ The browser Back button must behave predictably if history state is used. Refres
 
 - Apply `dramatic` to the root `data-presentation-mode` attribute on every public and private view.
 - Do not render a presentation selector or store presentation choice in local storage.
-- Best choice for visitors who want essential information quickly.
-
-#### Corporate
-
-- Polished, structured, restrained, and recruiter-friendly.
-- Clear grids, timelines, concise project summaries, and professional visual hierarchy.
-- No jargon-heavy or impersonal rewrite of the portfolio owner's content.
-
-#### Dramatic
-
 - Theater-inspired composition, stronger visual rhythm, layered depth, and purposeful motion.
 - Animation must respect `prefers-reduced-motion`, never delay access to content, and never be required to understand or navigate the page.
 - Decorative effects must not reduce contrast, keyboard usability, performance, or mobile readability.
@@ -385,11 +375,11 @@ The contact payload includes only `name`, `email`, and `message`. Do not trust c
 - If deletion fails, keep or restore the row and show an error.
 - Ensure the mobile experience remains usable; a responsive card/list transformation is acceptable if it preserves all required fields and actions.
 
-### Presentation choice
+### Dramatic presentation state
 
-- Changing modes must not reset the current public section, contact-form draft, or authentication session.
-- Missing or invalid stored values fall back safely to Simple or a neutral default.
-- Every mode must pass the same functional and accessibility checks.
+- Apply Dramatic mode consistently without a visitor-facing selector.
+- Navigation must not reset the current contact-form draft or authentication session.
+- The single presentation must pass every functional, responsive, and accessibility check.
 
 ## 12. Deployment and Repository Workflow
 
