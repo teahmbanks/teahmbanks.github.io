@@ -841,7 +841,7 @@ html[data-presentation-mode='dramatic'] .skills-page__section {
   width: 100%;
   height: clamp(13rem, 28vw, 20rem);
   object-fit: cover;
-  object-position: center 48%;
+  object-position: center top;
 }
 
 .about-hero__content {
