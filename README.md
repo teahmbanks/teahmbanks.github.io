@@ -1,10 +1,10 @@
-# Bringing access to everyone - Teah Banks Portfolio
+# Problem Solving Through Adaptation - Teah Banks Portfolio
 
 [View the live portfolio](https://teahmbanks.github.io/)
 
 ## Project Description
 
-Bringing access to everyone is Teah Banks's public professional portfolio. It presents her work as a developer, educator, stage manager, and adaptive problem-solver through one responsive Dramatic visual experience.
+Problem Solving Through Adaptation is Teah Banks's public professional portfolio. It presents her work as a developer, educator, stage manager, and adaptive problem-solver through one responsive Dramatic visual experience.
 
 The site opens directly on a Home introduction and provides same-page navigation to Featured Projects, Skills and Experience, About Me, Contact, and Links. Featured Projects documents three past coding projects - StageSpace, CodeBloggs, and Rocket Food Delivery - as problem-solving case studies with verified technologies and repository links.
 
