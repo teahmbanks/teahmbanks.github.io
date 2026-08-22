@@ -54,8 +54,10 @@ The public contact form stores messages in Supabase. A manually accessed, Supaba
 teahmbanks.github.io/
 ├── .github/workflows/
 │   └── deploy.yml                 # Builds and deploys main to GitHub Pages
+├── ai/
+│   ├── ai-spec.md                 # Global AI specification
+│   └── features/                  # Eight required feature specifications
 ├── docs/
-│   ├── ai/                        # Global and feature AI specifications
 │   ├── pitch-feedback.md          # Elevator-pitch feedback deliverable
 │   ├── script-1.md                # First elevator-pitch script
 │   └── script-2.md                # Revised elevator-pitch script
@@ -230,7 +232,7 @@ Provider-dependent behavior should always be rechecked after changing Supabase c
 
 ## AI-Assisted Assets and Specifications
 
-The dragonfly logo and editorial illustrations were generated with OpenAI's image generator. Their purposes, constraints, dates, and usage are documented in `RESEARCH.md`. Global and feature-level implementation specifications are stored under `docs/ai/`.
+The dragonfly logo and editorial illustrations were generated with OpenAI's image generator. Their purposes, constraints, dates, and usage are documented in `RESEARCH.md`. Global and feature-level implementation specifications are stored under `ai/`.
 
 ## Author
 

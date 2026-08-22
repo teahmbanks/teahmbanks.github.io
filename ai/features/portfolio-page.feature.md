@@ -1,6 +1,6 @@
 # Feature Specification - Portfolio Page
 
-> Use this specification together with `docs/ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
+> Use this specification together with `ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
 
 ## 1. Feature Goal
 
