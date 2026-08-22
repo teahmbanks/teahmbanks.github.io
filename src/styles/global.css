@@ -1131,6 +1131,68 @@ html[data-presentation-mode='dramatic'] .form-feedback--success {
   color: #bcebcf;
 }
 
+/* Sparse circuit traces echo the portfolio artwork without competing with content. */
+.home-section--skills,
+.portfolio-section:nth-of-type(3),
+.skills-page__section:last-child,
+.about-section--principles,
+.links-section,
+.contact-section {
+  position: relative;
+  isolation: isolate;
+}
+
+.home-section--skills::after,
+.portfolio-section:nth-of-type(3)::after,
+.skills-page__section:last-child::after,
+.about-section--principles::after,
+.links-section::after,
+.contact-section::after {
+  position: absolute;
+  z-index: 0;
+  width: clamp(9rem, 20vw, 15rem);
+  height: clamp(5rem, 12vw, 9rem);
+  background: var(--color-accent);
+  content: '';
+  mask: url('/images/decor/circuit-trace.svg') center / contain no-repeat;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.home-section--skills::after,
+.skills-page__section:last-child::after,
+.links-section::after {
+  top: 1.25rem;
+  right: -1.25rem;
+}
+
+.portfolio-section:nth-of-type(3)::after,
+.about-section--principles::after,
+.contact-section::after {
+  bottom: 1.25rem;
+  left: -1.25rem;
+  rotate: 180deg;
+}
+
+.home-section--skills > *,
+.portfolio-section:nth-of-type(3) > *,
+.skills-page__section:last-child > *,
+.about-section--principles > *,
+.links-section > *,
+.contact-section > * {
+  position: relative;
+  z-index: 1;
+}
+
+html[data-presentation-mode='dramatic'] .home-section--skills::after,
+html[data-presentation-mode='dramatic'] .portfolio-section:nth-of-type(3)::after,
+html[data-presentation-mode='dramatic'] .skills-page__section:last-child::after,
+html[data-presentation-mode='dramatic'] .about-section--principles::after,
+html[data-presentation-mode='dramatic'] .links-section::after,
+html[data-presentation-mode='dramatic'] .contact-section::after {
+  opacity: 0.13;
+}
+
 html[data-presentation-mode='dramatic'] .page-panel::after,
 html[data-presentation-mode='dramatic'] .welcome-portal::after {
   position: absolute;
