@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage.jsx'
 import LinksPage from './pages/LinksPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
+import BackOfficePage from './pages/BackOfficePage.jsx'
 import WelcomePortal from './pages/WelcomePortal.jsx'
 import { publicViewIds } from './data/navigation.js'
 
@@ -18,12 +19,12 @@ const placeholderViews = {
 /** Coordinates shared public-view state without adding public route paths. */
 function App() {
   const [activeView, setActiveView] = useState('welcome')
-  const [secretView, setSecretView] = useState(() => window.location.hash === '#/login' ? 'login' : null)
+  const [secretView, setSecretView] = useState(() => window.location.hash === '#/login' ? 'login' : window.location.hash === '#/backoffice' ? 'backoffice' : null)
   const { presentationMode, setPresentationMode } = usePresentationMode()
 
   useEffect(() => {
     function syncSecretView() {
-      setSecretView(window.location.hash === '#/login' ? 'login' : null)
+      setSecretView(window.location.hash === '#/login' ? 'login' : window.location.hash === '#/backoffice' ? 'backoffice' : null)
     }
 
     window.addEventListener('hashchange', syncSecretView)
@@ -37,6 +38,10 @@ function App() {
         onSuccess={() => { window.location.hash = '#/backoffice' }}
       />
     )
+  }
+
+  if (secretView === 'backoffice') {
+    return <BackOfficePage onRequireLogin={() => { window.location.hash = '#/login' }} />
   }
 
   function navigateTo(requestedView) {

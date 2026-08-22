@@ -20,4 +20,12 @@ with check (
   and char_length(btrim(message)) between 1 and 2000
 );
 
+drop policy if exists "Authenticated admin can read messages" on public.messages;
+create policy "Authenticated admin can read messages"
+on public.messages for select to authenticated using (true);
+
+drop policy if exists "Authenticated admin can delete messages" on public.messages;
+create policy "Authenticated admin can delete messages"
+on public.messages for delete to authenticated using (true);
+
 -- No public select, update, or delete policies are created.
