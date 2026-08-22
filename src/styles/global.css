@@ -1193,6 +1193,69 @@ html[data-presentation-mode='dramatic'] .site-footer__copyright {
   color: #d8e9e1;
 }
 
+.login-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 5vw, 3rem);
+}
+
+.login-card {
+  width: min(100%, 34rem);
+  padding: clamp(1.5rem, 5vw, 3rem);
+  border: 1px solid var(--color-border);
+  border-radius: var(--surface-radius);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-medium);
+}
+
+.login-card h1 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(2rem, 7vw, 3.25rem);
+  line-height: 1.05;
+}
+
+.login-card__intro {
+  margin: 1rem 0 1.5rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+}
+
+.login-form {
+  display: grid;
+  gap: 1.15rem;
+}
+
+.login-form > button {
+  min-height: 3rem;
+  border: 0;
+  border-radius: var(--surface-radius);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.login-form > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.62;
+}
+
+.login-card__return {
+  min-height: 2.75rem;
+  margin-top: 1rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--color-accent);
+  font: inherit;
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
 @media (min-width: 38rem) {
   .mode-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
