@@ -607,6 +607,11 @@ html[data-presentation-mode='dramatic'] .home-section {
   list-style: none;
 }
 
+.project-list {
+  display: grid;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+
 .project-case-study {
   overflow: hidden;
   border: 1px solid var(--color-border);
@@ -619,6 +624,184 @@ html[data-presentation-mode='dramatic'] .home-section {
   width: 100%;
   aspect-ratio: 3 / 2;
   object-fit: cover;
+}
+
+.project-preview {
+  padding: clamp(1rem, 3vw, 2rem);
+  border-bottom: 1px solid var(--color-border);
+  background:
+    radial-gradient(circle at 85% 10%, rgb(226 177 41 / 13%), transparent 18rem),
+    #0a292b;
+}
+
+.project-preview__browser {
+  overflow: hidden;
+  border: 1px solid rgb(216 233 225 / 45%);
+  border-radius: 0.75rem;
+  background: #f7fbfa;
+  box-shadow: 0 1.25rem 2.8rem rgb(0 0 0 / 24%);
+}
+
+.project-preview__bar {
+  display: grid;
+  min-height: 2.65rem;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.55rem 0.8rem;
+  color: #d8e9e1;
+  background: #102f30;
+}
+
+.project-preview__bar::after {
+  width: 2.4rem;
+  content: '';
+}
+
+.project-preview__dots {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.project-preview__dots i {
+  display: block;
+  width: 0.65rem;
+  height: 0.65rem;
+  border-radius: 50%;
+  background: #f5dcd3;
+}
+
+.project-preview__dots i:nth-child(2) {
+  background: #e2b129;
+}
+
+.project-preview__dots i:nth-child(3) {
+  background: #929965;
+}
+
+.project-preview__address {
+  min-width: 0;
+  overflow: hidden;
+  padding: 0.3rem 0.75rem;
+  border: 1px solid rgb(216 233 225 / 28%);
+  border-radius: 999px;
+  font-size: 0.75rem;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.project-preview__viewport {
+  display: grid;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  place-items: stretch;
+  background: #edf4f2;
+}
+
+.project-preview__viewport > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 280ms ease;
+}
+
+.project-preview__browser:hover .project-preview__viewport > img,
+.project-preview__browser:focus-within .project-preview__viewport > img {
+  transform: scale(1.018);
+}
+
+.project-preview__api {
+  display: grid;
+  min-height: 100%;
+  align-content: start;
+  padding: clamp(1rem, 4vw, 2.25rem);
+  color: #d8e9e1;
+  background:
+    linear-gradient(rgb(6 148 148 / 8%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(6 148 148 / 8%) 1px, transparent 1px),
+    #071f21;
+  background-size: 2rem 2rem;
+}
+
+.project-preview__api > div {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.project-preview__api span {
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  color: #173334;
+  background: #e2b129;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.project-preview__api code {
+  overflow-wrap: anywhere;
+}
+
+.project-preview__api pre {
+  max-width: 100%;
+  padding: 1rem;
+  overflow: auto;
+  border: 1px solid rgb(146 153 101 / 50%);
+  border-radius: 0.5rem;
+  margin: 1rem 0 0;
+  color: #fff8f1;
+  background: rgb(10 41 43 / 88%);
+  font: 0.82rem/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  white-space: pre-wrap;
+}
+
+.project-preview__details {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.35rem;
+  color: #fff8f1;
+}
+
+.project-preview__details h4 {
+  margin: 0;
+  font-size: clamp(1.35rem, 3vw, 2rem);
+}
+
+.project-preview__details p {
+  max-width: 48rem;
+  margin: 0;
+  color: #d8e9e1;
+  line-height: 1.6;
+}
+
+.project-preview__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.project-preview__controls button {
+  min-height: 2.75rem;
+  padding: 0.55rem 0.85rem;
+  border: 1px solid #929965;
+  border-radius: 999px;
+  color: #fff8f1;
+  background: transparent;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.project-preview__controls button:hover {
+  background: rgb(226 177 41 / 15%);
+}
+
+.project-preview__controls button[aria-pressed='true'] {
+  border-color: #e2b129;
+  color: #173334;
+  background: #e2b129;
 }
 
 .project-case-study__content {

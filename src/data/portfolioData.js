@@ -38,6 +38,35 @@ export const projects = [
     description:
       'StageSpace brings my theater-production experience into a full-stack application. Its current foundation includes public and protected routes, account creation and sign-in, company and production views, backstage hubs, and department workspaces ready for deeper production tools.',
     image: portfolioImages.experience,
+    preview: {
+      id: 'stagespace',
+      scenes: [
+        {
+          id: 'welcome',
+          label: 'Welcome',
+          address: 'stagespace.local/',
+          image: '/images/portfolio/stagespace-welcome.webp',
+          alt: 'StageSpace welcome page with theater collaboration messaging and a backstage dashboard preview',
+          caption: 'The public welcome view introduces the shared backstage workspace and its production-focused structure.',
+        },
+        {
+          id: 'sign-in',
+          label: 'Sign in',
+          address: 'stagespace.local/login',
+          image: '/images/portfolio/stagespace-login.webp',
+          alt: 'StageSpace sign-in page for returning theater collaborators',
+          caption: 'Authentication protects the company dashboards, production rooms, and department workspaces behind this entry point.',
+        },
+        {
+          id: 'sign-up',
+          label: 'Create account',
+          address: 'stagespace.local/signup',
+          image: '/images/portfolio/stagespace-signup.webp',
+          alt: 'StageSpace account creation page with role and membership choices',
+          caption: 'The account flow begins separating individual and company-member needs before users enter a workspace.',
+        },
+      ],
+    },
     repository: {
       href: 'https://github.com/teahmbanks/Personal-project--Theater-website',
       label: 'View StageSpace on GitHub',
@@ -80,6 +109,35 @@ export const projects = [
     description:
       'CodeBloggs is a full-stack social platform with registration, session-based authentication, posts, comments, replies, likes, user networking, account settings, and administrative interfaces. Later work strengthened the project through Lighthouse audits and a repeatable Selenium test suite.',
     image: portfolioImages.problemSolving,
+    preview: {
+      id: 'codebloggs',
+      scenes: [
+        {
+          id: 'login',
+          label: 'Sign in',
+          address: 'codebloggs.local/login',
+          image: '/images/portfolio/codebloggs-login.webp',
+          alt: 'Current CodeBloggs sign-in interface',
+          caption: 'The current client begins with a focused session-based authentication flow.',
+        },
+        {
+          id: 'register',
+          label: 'Create profile',
+          address: 'codebloggs.local/register',
+          image: '/images/portfolio/codebloggs-register.webp',
+          alt: 'Current CodeBloggs profile registration interface',
+          caption: 'Registration gathers the profile details used throughout the social and networking experience.',
+        },
+        {
+          id: 'network-plan',
+          label: 'Network plan',
+          address: 'codebloggs.local/design/network',
+          image: '/images/portfolio/codebloggs-network-plan.webp',
+          alt: 'CodeBloggs network-view design showing user cards and profile information',
+          caption: 'This preserved interface plan shows how the network and user-card experience was mapped before implementation.',
+        },
+      ],
+    },
     repository: {
       href: 'https://github.com/teahmbanks/Module-15',
       label: 'View CodeBloggs on GitHub',
@@ -122,6 +180,54 @@ export const projects = [
     description:
       'Rocket Food Delivery combines a Spring Boot REST API and administrative back office with an Expo mobile application. It supports role-aware customer and courier experiences, restaurant ordering, delivery management, account tools, order history, and optional notification preferences.',
     image: portfolioImages.experience,
+    preview: {
+      id: 'rocket-delivery',
+      scenes: [
+        {
+          id: 'mobile-login',
+          label: 'Mobile login',
+          address: 'rocket-delivery.app/login',
+          image: '/images/portfolio/rocket-delivery-login.webp',
+          alt: 'Rocket Food Delivery mobile login interface displayed in its web preview',
+          caption: 'The Expo client starts with the role-aware session used to route customers and couriers into different experiences.',
+        },
+        {
+          id: 'restaurants-api',
+          label: 'Restaurants API',
+          address: 'api.rocket-delivery.local/api/restaurants',
+          method: 'GET',
+          endpoint: '/api/restaurants?rating=4&price_range=2',
+          response: {
+            status: 'success',
+            data: [
+              { id: 12, name: 'Sample Restaurant', price_range: 2, rating: 4.6 },
+              { id: 18, name: 'Neighborhood Kitchen', price_range: 2, rating: 4.3 },
+            ],
+          },
+          caption: 'The mobile restaurant list consumes filterable Spring Boot endpoints with consistent response envelopes.',
+        },
+        {
+          id: 'orders-api',
+          label: 'Order lifecycle',
+          address: 'api.rocket-delivery.local/api/orders/42',
+          method: 'GET',
+          endpoint: '/api/orders/42',
+          response: {
+            status: 'success',
+            data: {
+              id: 42,
+              status: 'OUT_FOR_DELIVERY',
+              customer_id: 7,
+              courier_id: 3,
+              restaurant_id: 12,
+              send_email: true,
+              send_sms: false,
+            },
+          },
+          caption: 'One order record connects customer, courier, restaurant, status, and optional notification decisions.',
+        },
+      ],
+    },
     repository: {
       href: 'https://github.com/teahmbanks/Module-14',
       label: 'View Rocket Food Delivery on GitHub',
