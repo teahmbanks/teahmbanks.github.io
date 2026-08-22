@@ -1249,14 +1249,15 @@ html[data-presentation-mode='dramatic'] .about-section {
 
 .resource-card img {
   display: block;
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
+  width: clamp(4.5rem, 8vw, 6rem);
+  aspect-ratio: 1;
+  margin: 1.35rem auto 0;
+  object-fit: contain;
 }
 
 .resource-card__content {
   display: grid;
-  min-height: 16rem;
+  min-height: 14rem;
   align-content: start;
   padding: 1.2rem;
 }
