@@ -4,7 +4,7 @@
 
 ## 1. Feature Goal
 
-Create a recruiter-friendly portfolio and resume experience that presents verified education, work history, and projects in reverse chronological order. Project entries should foreground Teah Banks's problem-solving process while every presentation mode preserves the same facts and functionality.
+Create a recruiter-friendly portfolio and resume experience that presents verified education, work history, and projects. Project entries should foreground Teah Banks's problem-solving process in the focused Dramatic presentation.
 
 ## 2. Scope
 
@@ -21,7 +21,7 @@ Create a recruiter-friendly portfolio and resume experience that presents verifi
 
 - Invented institutions, programs, employers, dates, responsibilities, achievements, technologies, or project results.
 - Contact submission, authentication, Back Office behavior, or external API calls.
-- A CMS, résumé editor, filtering system, or different content for each presentation mode.
+- A CMS, résumé editor, filtering system, or additional presentation modes.
 - Optional dark mode or multilingual features.
 
 ## 3. Requirements Breakdown
@@ -98,7 +98,7 @@ No database or API interface is required.
 ## 7. Expected and Failure Behavior
 
 - All three required content sections render with logical headings and visual separation.
-- The same structured content appears in Simple, Corporate, and Dramatic modes.
+- The same structured content appears throughout the Dramatic experience.
 - Broken images preserve useful alternative text and do not collapse surrounding content.
 - If the final resume is unavailable, show a clear unavailable status rather than a broken download.
 - Empty content collections show an honest temporary message during development and block the acceptance criterion.
@@ -110,7 +110,7 @@ No database or API interface is required.
 - Do not rely on timelines, icons, color, or visual position alone to communicate chronology.
 - Resume access is keyboard operable and clearly identifies a PDF download.
 - Cards and timelines stack at 768px and below with no horizontal scrolling at 320px or 200% zoom.
-- Respect reduced motion and retain visible focus in every presentation mode.
+- Respect reduced motion and retain visible focus throughout the Dramatic presentation.
 
 ## 9. AI Image Record
 
@@ -124,7 +124,7 @@ No database or API interface is required.
 ## 10. Verification Record
 
 - Date: August 21, 2026.
-- Presentation parity: Simple, Corporate, and Dramatic each rendered the same two project case studies, four experience/education entries, meaningful image alternatives, and PDF download.
+- Dramatic presentation: three project case studies, four experience/education entries, meaningful image alternatives, repository links, and PDF download are rendered.
 - Responsive reflow: 1280px, 768px, 640px (200%-zoom equivalent), and 320px browser checks had matching viewport and document widths with all project and experience cards inside the viewport.
 - Accessibility contracts: one page-level heading, logical section and card headings, meaningful image alternatives, a native PDF download link, visible focus styling, and reduced-motion overrides are present.
 - Resume: the public PDF URL returned HTTP 200 with `application/pdf`.
@@ -142,7 +142,7 @@ No database or API interface is required.
 - [x] A final resume PDF is available through a working, clearly labelled download.
 - [x] Education, work, and projects appear as three distinct visual sections.
 - [x] At least two relevant AI-generated images are present, accessible, optimized, and documented.
-- [x] Simple, Corporate, and Dramatic modes present identical facts and functionality.
+- [x] The Dramatic presentation contains the complete project facts and functionality.
 - [x] Keyboard, focus, heading, image-alternative, reduced-motion, and PDF-link behavior are verified.
 - [x] Desktop, 768px, 320px, and 200% zoom-equivalent reflow checks pass without horizontal overflow.
 - [x] Browser console has no known errors in required flows.

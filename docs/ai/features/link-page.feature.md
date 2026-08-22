@@ -12,7 +12,7 @@ Create a clear resource page with at least three verified external links that he
 
 - GitHub, LinkedIn, and CodeBoxx Academy resource cards.
 - A meaningful image, title, description, and verified external URL for each card.
-- Safe new-tab behavior, accessible names, responsive layouts, and identical content in all presentation modes.
+- Safe new-tab behavior, accessible names, and responsive Dramatic layouts.
 
 ### Out of scope
 
@@ -44,7 +44,7 @@ Create a clear resource page with at least three verified external links that he
 - [x] The global and feature specifications are reviewed before implementation.
 - [x] At least three verified resource cards include an image, title, description, and external URL.
 - [x] New-tab behavior is visible, announced, and uses safe link attributes.
-- [x] Simple, Corporate, and Dramatic modes present identical content and functionality.
+- [x] Dramatic mode presents the complete content and functionality.
 - [x] Heading, list, image-alternative, focus, and reduced-motion behavior are verified.
 - [x] Desktop, 768px, 320px, and 200% zoom-equivalent reflow checks pass.
 - [x] The browser console has no known errors in required flows.

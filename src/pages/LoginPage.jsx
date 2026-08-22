@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { signInAdmin } from '../lib/authService.js'
 import { isSupabaseConfigured } from '../lib/supabaseClient.js'
 
@@ -21,6 +21,8 @@ function LoginPage({ onCancel, onSuccess }) {
   const [form, setForm] = useState(INITIAL_FORM)
   const [errors, setErrors] = useState({})
   const [status, setStatus] = useState('idle')
+  const emailRef = useRef(null)
+  const passwordRef = useRef(null)
 
   function updateField(event) {
     const { name, value } = event.target
@@ -37,6 +39,10 @@ function LoginPage({ onCancel, onSuccess }) {
     setErrors(result.errors)
     if (Object.keys(result.errors).length > 0) {
       setStatus('invalid')
+      window.requestAnimationFrame(() => {
+        if (result.errors.email) emailRef.current?.focus()
+        else if (result.errors.password) passwordRef.current?.focus()
+      })
       return
     }
 
@@ -76,6 +82,7 @@ function LoginPage({ onCancel, onSuccess }) {
               maxLength={254}
               name="email"
               onChange={updateField}
+              ref={emailRef}
               required
               type="email"
               value={form.email}
@@ -93,6 +100,7 @@ function LoginPage({ onCancel, onSuccess }) {
               id="login-password"
               name="password"
               onChange={updateField}
+              ref={passwordRef}
               required
               type="password"
               value={form.password}

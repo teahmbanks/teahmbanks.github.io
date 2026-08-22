@@ -8,7 +8,7 @@ function Footer({ onNavigate }) {
         <div>
           <p className="site-footer__brand">Accessible to All</p>
           <p className="site-footer__statement">
-            One portfolio. Three presentation styles. Equal access.
+            A dramatic portfolio built around thoughtful problem-solving.
           </p>
         </div>
 

@@ -1,10 +1,10 @@
-# Feature Specification - Shared Layout, Header, Footer, and Presentation Modes
+# Feature Specification - Shared Layout, Header, Footer, and Dramatic Presentation
 
 > Use this specification together with `docs/ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
 
 ## 1. Feature Goal
 
-Create the shared application frame that appears across all public portfolio views: a reusable main layout, accessible navigation, personal dragonfly logo, footer, responsive desktop/mobile behavior, and one centralized visual system supporting Simple, Corporate, and Dramatic presentation modes without duplicating content.
+Create the shared application frame that appears across all public portfolio views: a reusable main layout, accessible navigation, personal dragonfly logo, footer, responsive desktop/mobile behavior, and one centralized Dramatic visual system.
 
 ## 2. Scope
 
@@ -17,8 +17,7 @@ Create the shared application frame that appears across all public portfolio vie
 - Logo link to the Home/introduction view.
 - Shared footer with onsite contact access, public GitHub link, and copyright notice.
 - Skip link, semantic landmarks, visible focus states, current-view indication, and keyboard operation.
-- Centralized Simple, Corporate, and Dramatic CSS token sets using one shared component tree.
-- Locally persisted presentation choice with safe fallback behavior.
+- Centralized Dramatic CSS tokens using one shared component tree.
 - Minimal placeholder panels that allow every navigation destination and theme to be tested before page-specific features are implemented.
 
 ### Out of scope
@@ -27,7 +26,7 @@ Create the shared application frame that appears across all public portfolio vie
 - Supabase data behavior or authentication.
 - Final AI imagery beyond the required header logo.
 - Light/dark mode and multilingual extra miles.
-- A separate component tree or different content for each presentation mode.
+- Additional presentation modes or a presentation-selection portal.
 
 ## 3. Requirements Breakdown
 
@@ -36,18 +35,17 @@ Create the shared application frame that appears across all public portfolio vie
 - `MainLayout` renders the header, a single `main` landmark, page content, and footer.
 - The layout reserves enough space that sticky/fixed navigation never covers content.
 - A visible-on-focus skip link moves keyboard focus to the main landmark.
-- The same layout and page content are used in all presentation modes.
+- The same layout is used across every view.
 
 ### Navigation
 
 The public navigation order is fixed:
 
-1. Welcome Portal
-2. Featured Projects
-3. Skills and Experience
-4. About Me
-5. Contact
-6. Links
+1. Featured Projects
+2. Skills and Experience
+3. About Me
+4. Contact
+5. Links
 
 - Navigation items behave as same-document application links and do not add `/home`, `/portfolio`, or other public route paths.
 - The active destination is identified visually and with `aria-current="page"`.
@@ -59,13 +57,13 @@ The public navigation order is fixed:
 
 - The header is visible at the top of every public view.
 - Above 768px, it remains sticky at the top and shows horizontal navigation.
-- It uses a consistent structure across all views while its tokens adapt to the selected presentation mode.
+- It uses a consistent Dramatic presentation across all views.
 - The brand block contains the AI-generated dragonfly mark and readable portfolio-owner text.
 - The logo scales without overflow and retains at least a 44-by-44 CSS-pixel activation target.
 
 ### Mobile bottom navigation
 
-- At 768px and below, the six main navigation items move to a fixed bottom bar.
+- At 768px and below, the five main navigation items move to a fixed bottom bar.
 - Each item has a decorative icon and a visible text label.
 - Each activation target is at least 44 CSS pixels in its primary dimension.
 - The layout accounts for mobile safe-area insets and adds enough bottom padding to keep page/footer content visible.
@@ -78,26 +76,18 @@ The public navigation order is fixed:
 - External links open in a new tab, disclose that behavior to assistive technology, and use `rel="noopener noreferrer"`.
 - Unverified email or LinkedIn information must not be invented.
 
-### Presentation modes
+### Dramatic presentation
 
-- Supported values are `simple`, `corporate`, and `dramatic`.
-- `simple` is the safe default for missing, invalid, or inaccessible stored data.
-- Store the choice under a versioned local-storage key.
-- Apply the current value to a root `data-presentation-mode` attribute.
-- Theme changes use semantic CSS custom properties rather than duplicated component styles.
-- All three modes maintain WCAG AA-oriented contrast, visible focus, readable type, and identical functionality.
+- Apply `dramatic` to the root `data-presentation-mode` attribute.
+- The presentation uses semantic CSS custom properties rather than duplicated component styles.
+- Dramatic mode maintains WCAG AA-oriented contrast, visible focus, readable type, and complete functionality.
 - Dramatic-mode motion is optional and must be removed or reduced when `prefers-reduced-motion` is active.
-- Changing mode must not change the current view or page content.
 
 ## 4. User Flow
 
-1. A first-time visitor lands on the Welcome Portal with Simple mode as the default.
-2. The visitor chooses Simple, Corporate, or Dramatic.
-3. The shared theme state updates without reloading the application and is stored locally when storage is available.
-4. The visitor enters the Home/introduction view.
-5. Desktop visitors use the sticky top navigation; mobile visitors use the fixed bottom navigation.
-6. The visitor can return to Welcome Portal to change presentation mode.
-7. A returning visitor receives the stored valid presentation choice; invalid or unavailable storage safely returns to Simple.
+1. A visitor lands directly on the Home/introduction view in Dramatic mode.
+2. Desktop visitors use the sticky top navigation; mobile visitors use the fixed bottom navigation.
+3. The visitor moves between public views without a full-page reload.
 
 ## 5. Interfaces Involved
 
@@ -108,8 +98,6 @@ The public navigation order is fixed:
 - `src/components/Footer.jsx`
 - `src/components/NavigationIcon.jsx`
 - `src/components/PagePlaceholder.jsx`
-- `src/hooks/usePresentationMode.js`
-- `src/pages/WelcomePortal.jsx`
 - `src/App.jsx`
 
 ### Data and styles
@@ -153,7 +141,7 @@ Navigation definitions must be stored once and rendered by both desktop and mobi
 
 - If the logo fails to load, meaningful alternative text still identifies the brand link.
 - If local storage is blocked, mode selection still works for the current session.
-- If a requested view identifier is invalid, render the Welcome Portal rather than a blank page.
+- If a requested view identifier is invalid, render Home rather than a blank page.
 - No missing link, image, or storage error may crash the public application.
 
 ## 8. Accessibility and Responsive Rules
@@ -182,17 +170,16 @@ Navigation definitions must be stored once and rendered by both desktop and mobi
 - [x] Work is performed on `feature/header-footer`, created from synchronized `dev`.
 - [x] The global specification and this feature specification were reviewed before implementation.
 - [x] `MainLayout` wraps all public content between a reusable header and footer.
-- [x] The required six public destinations appear in the exact required order.
+- [x] The required five public destinations appear in the exact required order.
 - [x] Login and Back Office do not appear in public navigation.
 - [x] The AI-generated dragonfly logo is visible, has meaningful alternative text, scales correctly, and navigates to Home.
 - [x] Desktop navigation is horizontal and sticky above 768px.
 - [x] Mobile navigation uses icons and visible labels in a fixed bottom bar at 768px and below.
 - [x] Footer appears on all public views with contact access, GitHub link, and copyright.
-- [x] Simple, Corporate, and Dramatic modes use the same content and component structure.
-- [x] A valid presentation choice persists; invalid/unavailable storage safely falls back to Simple.
+- [x] The application opens Home directly and applies the Dramatic presentation.
 - [x] Current-view and keyboard-focus states are visible and programmatically conveyed.
 - [x] Skip link and semantic landmarks work.
-- [x] All three modes are checked at desktop and 320px mobile widths without horizontal overflow.
+- [x] Dramatic mode is checked at desktop and 320px mobile widths without horizontal overflow.
 - [x] Reduced-motion behavior is respected.
 - [x] Browser console has no known errors in required flows.
 - [x] `npm run lint`, `npm run build`, and `git diff --check` pass.

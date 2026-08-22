@@ -4,26 +4,26 @@
 
 ## 1. Feature Goal
 
-Replace the temporary Home placeholder with a clear, responsive introduction to Teah Banks and an evidence-based overview of technical and transferable skills. The page should immediately communicate adaptive problem-solving across software development, education, and stage management while preserving identical content in Simple, Corporate, and Dramatic modes.
+Replace the temporary Home placeholder with a clear, responsive introduction to Teah Banks and an evidence-based overview of technical and transferable skills. The page should immediately communicate adaptive problem-solving across software development, education, and stage management in the focused Dramatic presentation.
 
 ## 2. Scope
 
 ### In scope
 
-- Home content rendered at the root application experience after the Welcome Portal.
+- Home content rendered directly at the root application experience.
 - A prominent name, professional role or tagline, and concise introductory paragraph.
 - At least three technical skills with meaningful icons and supporting explanations.
 - At least three soft skills or talents with meaningful icons and supporting explanations.
 - Clear visual separation between introduction, technical skills, and transferable skills.
 - Two relevant AI-generated images with accurate alternative text and generation documentation.
-- Structured content data shared by every presentation mode.
+- Structured content data shared across the Home experience.
 - Responsive, keyboard-readable, reduced-motion-safe presentation.
 
 ### Out of scope
 
 - Detailed project case studies, education timeline, work history, and resume download.
 - Contact form, LinkedIn call to action, authentication, or Supabase behavior.
-- Separate facts or markup for different presentation modes.
+- Additional presentation modes.
 - Unverified biography claims, dates, metrics, employers, credentials, or technologies.
 - Optional dark mode, multilingual support, or new runtime dependencies.
 
@@ -61,12 +61,12 @@ Replace the temporary Home placeholder with a clear, responsive introduction to 
 
 ## 4. User Flow
 
-1. A visitor chooses Simple, Corporate, or Dramatic in the Welcome Portal.
-2. The visitor enters Home without leaving the root URL.
+1. A visitor opens the root URL.
+2. The visitor enters Home directly in Dramatic mode.
 3. The introduction establishes Teah Banks's professional identity and problem-solving focus.
 4. The visitor reviews technical skills and their supporting explanations.
 5. The visitor reviews transferable skills grounded in development, education, and stage management.
-6. The visitor may use the shared navigation to continue without losing the selected presentation mode.
+6. The visitor may use the shared navigation to continue through the Dramatic experience.
 
 ## 5. Interfaces Involved
 
@@ -111,7 +111,7 @@ Each technical or transferable skill contains:
 - Require at least three items in each skill category.
 - Do not render an item with a missing title or description.
 - Icon identifiers must map to a supported icon; use a safe fallback without crashing.
-- Content arrays and image metadata are defined once and reused in every presentation mode.
+- Content arrays and image metadata are defined once and reused throughout Home.
 
 ## 7. Expected and Failure Behavior
 
@@ -120,7 +120,7 @@ Each technical or transferable skill contains:
 - Home displays one logical `h1` and at least three visually distinct sections.
 - Both skill groups display at least three complete, understandable entries.
 - Both required images load with reserved dimensions and appropriate alternative text.
-- Switching presentation modes changes styling only, not facts, order, or functionality.
+- Dramatic styling does not change the facts, order, or functionality.
 - The page remains usable at the root URL and integrates with shared focus management.
 
 ### Failure behavior
@@ -138,7 +138,7 @@ Each technical or transferable skill contains:
 - Meaningful images use useful `alt` text; decorative elements use empty alternative text or CSS.
 - Keep text readable at 320px, 200% zoom, and enlarged-text settings without horizontal scrolling.
 - Stack cards and media vertically on narrow viewports; enhance to columns only when space permits.
-- Keep all text contrast at WCAG AA-oriented levels in all three modes.
+- Keep all text contrast at WCAG AA-oriented levels in Dramatic mode.
 - Respect `prefers-reduced-motion`; no animation may block reading or interaction.
 
 ## 9. AI Image Record
@@ -160,7 +160,7 @@ Each technical or transferable skill contains:
 - [x] At least three soft skills or talents include supporting text and meaningful icons.
 - [x] Introduction, technical skills, and transferable skills are clearly separated visual sections.
 - [x] At least two relevant AI-generated images are present, accessible, optimized, and documented.
-- [x] Simple, Corporate, and Dramatic modes present identical content and functionality.
+- [x] Dramatic mode presents the complete content and functionality.
 - [x] Keyboard, focus, heading, image-alternative, and reduced-motion behavior are verified.
 - [x] Desktop, 768px, 320px, and 200% zoom-equivalent reflow checks pass without horizontal overflow.
 - [x] Browser console has no known errors in required flows.

@@ -1,7 +1,5 @@
 import { useEffect, useState } from 'react'
 import MainLayout from './layouts/MainLayout.jsx'
-import PagePlaceholder from './components/PagePlaceholder.jsx'
-import usePresentationMode from './hooks/usePresentationMode.js'
 import HomePage from './pages/HomePage.jsx'
 import PortfolioPage from './pages/PortfolioPage.jsx'
 import SkillsExperiencePage from './pages/SkillsExperiencePage.jsx'
@@ -10,17 +8,16 @@ import LinksPage from './pages/LinksPage.jsx'
 import ContactPage from './pages/ContactPage.jsx'
 import LoginPage from './pages/LoginPage.jsx'
 import BackOfficePage from './pages/BackOfficePage.jsx'
-import WelcomePortal from './pages/WelcomePortal.jsx'
 import { publicViewIds } from './data/navigation.js'
-
-const placeholderViews = {
-}
 
 /** Coordinates shared public-view state without adding public route paths. */
 function App() {
-  const [activeView, setActiveView] = useState('welcome')
+  const [activeView, setActiveView] = useState('home')
   const [secretView, setSecretView] = useState(() => window.location.hash === '#/login' ? 'login' : window.location.hash === '#/backoffice' ? 'backoffice' : null)
-  const { presentationMode, setPresentationMode } = usePresentationMode()
+
+  useEffect(() => {
+    document.documentElement.dataset.presentationMode = 'dramatic'
+  }, [])
 
   useEffect(() => {
     function syncSecretView() {
@@ -45,7 +42,7 @@ function App() {
   }
 
   function navigateTo(requestedView) {
-    const nextView = publicViewIds.has(requestedView) ? requestedView : 'welcome'
+    const nextView = publicViewIds.has(requestedView) ? requestedView : 'home'
     setActiveView(nextView)
 
     window.requestAnimationFrame(() => {
@@ -54,16 +51,6 @@ function App() {
   }
 
   function renderActiveView() {
-    if (activeView === 'welcome') {
-      return (
-        <WelcomePortal
-          onEnter={() => navigateTo('home')}
-          presentationMode={presentationMode}
-          setPresentationMode={setPresentationMode}
-        />
-      )
-    }
-
     if (activeView === 'home') {
       return <HomePage />
     }
@@ -88,16 +75,13 @@ function App() {
       return <ContactPage />
     }
 
-    const view = placeholderViews[activeView] ?? placeholderViews.about
-
-    return <PagePlaceholder {...view} />
+    return <HomePage />
   }
 
   return (
     <MainLayout
       activeView={activeView}
       onNavigate={navigateTo}
-      presentationMode={presentationMode}
     >
       {renderActiveView()}
     </MainLayout>

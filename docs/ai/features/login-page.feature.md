@@ -12,7 +12,7 @@ Provide a discreet, accessible admin sign-in screen using Supabase email/passwor
 - The login destination must not appear in the public header, mobile navigation, footer, or calls to action.
 - A direct load at `/#/login` renders the login view.
 - Successful authentication changes the hash to `#/backoffice`.
-- “Return to portfolio” clears the secret hash and restores the public Welcome Portal.
+- “Return to portfolio” clears the secret hash and restores the public Home experience.
 
 ## 3. Authentication contract
 
@@ -40,6 +40,6 @@ Provide a discreet, accessible admin sign-in screen using Supabase email/passwor
 - [ ] Missing configuration, invalid input, pending, provider failure, and success are handled safely. Missing configuration is locally verified; configured states require Supabase.
 - [ ] Successful login sends the authenticated admin to `#/backoffice`.
 - [x] Credentials and raw Supabase errors are never logged or rendered.
-- [ ] Keyboard, focus, error association, responsive reflow, and all presentation modes are verified. Direct-load, return, 320px, and 768px flows pass.
+- [ ] Keyboard, focus, error association, and responsive Dramatic reflow are verified. Direct-load, return, 320px, and 768px flows pass.
 - [ ] Live authentication and session restoration are verified with configured Supabase infrastructure.
 - [x] `npm run lint`, `npm run build`, and `git diff --check` pass.

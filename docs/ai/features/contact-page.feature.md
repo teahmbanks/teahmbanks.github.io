@@ -13,7 +13,7 @@ Create an accessible public contact experience with LinkedIn access and a valida
 - Visible name, email, and message fields.
 - Client validation, pending protection, success feedback, retained-input failure behavior, and missing-configuration fallback.
 - Supabase insert payload limited to `name`, `email`, and `message`.
-- LinkedIn access, responsive layouts, and identical behavior in every presentation mode.
+- LinkedIn access and responsive Dramatic layouts.
 
 ### Out of scope
 
@@ -52,7 +52,7 @@ Create an accessible public contact experience with LinkedIn access and a valida
 - [ ] Valid submissions insert only the approved payload into `messages`.
 - [ ] Pending, success, invalid-input, Supabase-failure, and missing-configuration states behave as specified. Missing configuration is locally verified; live states require Supabase.
 - [x] LinkedIn remains available when the form cannot submit.
-- [ ] Simple, Corporate, and Dramatic modes preserve the same draft, content, and behavior.
+- [x] Dramatic mode preserves the draft, content, and behavior.
 - [ ] Keyboard, focus, error association, status announcement, and reduced-motion behavior are verified.
 - [ ] Desktop, 768px, 320px, and 200% zoom-equivalent reflow checks pass. Desktop, 768px, and 320px pass; 200% zoom remains.
 - [ ] Live Supabase insert behavior and RLS are verified with configured external infrastructure.
