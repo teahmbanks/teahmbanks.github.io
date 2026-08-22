@@ -1133,20 +1133,27 @@ html[data-presentation-mode='dramatic'] .form-feedback--success {
 
 /* Sparse circuit traces echo the portfolio artwork without competing with content. */
 .home-section--skills,
-.portfolio-section:nth-of-type(3),
-.skills-page__section:last-child,
-.about-section--principles,
+.portfolio-section,
+.skills-page__hero,
+.skills-page__section,
+.about-section,
+.links-hero,
 .links-section,
+.contact-hero,
 .contact-section {
   position: relative;
+  overflow: hidden;
   isolation: isolate;
 }
 
 .home-section--skills::after,
-.portfolio-section:nth-of-type(3)::after,
-.skills-page__section:last-child::after,
-.about-section--principles::after,
+.portfolio-section::after,
+.skills-page__hero::after,
+.skills-page__section::after,
+.about-section::after,
+.links-hero::after,
 .links-section::after,
+.contact-hero::after,
 .contact-section::after {
   position: absolute;
   z-index: 0;
@@ -1160,14 +1167,20 @@ html[data-presentation-mode='dramatic'] .form-feedback--success {
 }
 
 .home-section--skills::after,
-.skills-page__section:last-child::after,
-.links-section::after {
+.portfolio-section:nth-of-type(even)::after,
+.skills-page__hero::after,
+.skills-page__section:nth-of-type(odd)::after,
+.about-section:nth-of-type(even)::after,
+.links-hero::after,
+.contact-hero::after {
   top: 1.25rem;
   right: -1.25rem;
 }
 
-.portfolio-section:nth-of-type(3)::after,
-.about-section--principles::after,
+.portfolio-section:nth-of-type(odd)::after,
+.skills-page__section:nth-of-type(even)::after,
+.about-section:nth-of-type(odd)::after,
+.links-section::after,
 .contact-section::after {
   bottom: 1.25rem;
   left: -1.25rem;
@@ -1175,20 +1188,26 @@ html[data-presentation-mode='dramatic'] .form-feedback--success {
 }
 
 .home-section--skills > *,
-.portfolio-section:nth-of-type(3) > *,
-.skills-page__section:last-child > *,
-.about-section--principles > *,
+.portfolio-section > *,
+.skills-page__hero > *,
+.skills-page__section > *,
+.about-section > *,
+.links-hero > *,
 .links-section > *,
+.contact-hero > *,
 .contact-section > * {
   position: relative;
   z-index: 1;
 }
 
 html[data-presentation-mode='dramatic'] .home-section--skills::after,
-html[data-presentation-mode='dramatic'] .portfolio-section:nth-of-type(3)::after,
-html[data-presentation-mode='dramatic'] .skills-page__section:last-child::after,
-html[data-presentation-mode='dramatic'] .about-section--principles::after,
+html[data-presentation-mode='dramatic'] .portfolio-section::after,
+html[data-presentation-mode='dramatic'] .skills-page__hero::after,
+html[data-presentation-mode='dramatic'] .skills-page__section::after,
+html[data-presentation-mode='dramatic'] .about-section::after,
+html[data-presentation-mode='dramatic'] .links-hero::after,
 html[data-presentation-mode='dramatic'] .links-section::after,
+html[data-presentation-mode='dramatic'] .contact-hero::after,
 html[data-presentation-mode='dramatic'] .contact-section::after {
   opacity: 0.13;
 }
