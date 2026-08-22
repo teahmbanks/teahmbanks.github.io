@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import CodeBloggsSample from './CodeBloggsSample'
+import RocketDeliverySample from './RocketDeliverySample'
 
 /** Provides a small, truthful walkthrough of a project's real interface or API. */
 function ProjectPreview({ preview, projectName }) {
@@ -15,7 +17,11 @@ function ProjectPreview({ preview, projectName }) {
         </div>
 
         <div className="project-preview__viewport" aria-describedby={descriptionId}>
-          {activeScene.image ? (
+          {activeScene.product === 'codebloggs' ? (
+            <CodeBloggsSample view={activeScene.view} />
+          ) : activeScene.product === 'rocket-delivery' ? (
+            <RocketDeliverySample view={activeScene.view} />
+          ) : activeScene.image ? (
             <img
               alt={activeScene.alt}
               height="760"
