@@ -1,4 +1,4 @@
-# Global AI Specification - Accessible to All Portfolio
+# Global AI Specification - Bringing access to everyone Portfolio
 
 > **Read this document first.** Every implementation task and every feature specification must follow this global specification. If a feature specification conflicts with this document, stop and resolve the conflict before coding. If this document conflicts with the Module 16 Requirement Checklist, the checklist takes precedence.
 
@@ -6,7 +6,7 @@
 
 ### Working title
 
-**Accessible to All** - a personal professional portfolio.
+**Bringing access to everyone** - a personal professional portfolio.
 
 ### Product statement
 
