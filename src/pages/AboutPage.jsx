@@ -1,5 +1,4 @@
-import { homeImages } from '../data/homeData.js'
-import { aboutIntroduction, journeyStages, workingPrinciples } from '../data/aboutData.js'
+import { aboutImages, aboutIntroduction, journeyStages, workingPrinciples } from '../data/aboutData.js'
 
 /** Tells the verified story connecting theater, education, and programming. */
 function AboutPage() {
@@ -7,11 +6,11 @@ function AboutPage() {
     <div className="about-page">
       <section className="about-hero" aria-labelledby="view-heading">
         <img
-          alt={homeImages.connectedStrengths.alt}
+          alt={aboutImages.hero.alt}
           className="about-hero__image"
-          height="1024"
-          src={homeImages.connectedStrengths.src}
-          width="1536"
+          height="724"
+          src={aboutImages.hero.src}
+          width="2172"
         />
         <div className="about-hero__content">
           <p className="page-panel__eyebrow">{aboutIntroduction.eyebrow}</p>
