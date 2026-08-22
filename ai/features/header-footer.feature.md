@@ -41,11 +41,12 @@ Create the shared application frame that appears across all public portfolio vie
 
 The public navigation order is fixed:
 
-1. Featured Projects
-2. Skills and Experience
-3. About Me
-4. Contact
-5. Links
+1. Home
+2. Featured Projects
+3. Skills and Experience
+4. About Me
+5. Contact
+6. Links
 
 - Navigation items behave as same-document application links and do not add `/home`, `/portfolio`, or other public route paths.
 - The active destination is identified visually and with `aria-current="page"`.
@@ -63,7 +64,7 @@ The public navigation order is fixed:
 
 ### Mobile bottom navigation
 
-- At 768px and below, the five main navigation items move to a fixed bottom bar.
+- At 768px and below, the six main navigation items move to a fixed bottom bar.
 - Each item has a decorative icon and a visible text label.
 - Each activation target is at least 44 CSS pixels in its primary dimension.
 - The layout accounts for mobile safe-area insets and adds enough bottom padding to keep page/footer content visible.
@@ -170,7 +171,7 @@ Navigation definitions must be stored once and rendered by both desktop and mobi
 - [x] Work is performed on `feature/header-footer`, created from synchronized `dev`.
 - [x] The global specification and this feature specification were reviewed before implementation.
 - [x] `MainLayout` wraps all public content between a reusable header and footer.
-- [x] The required five public destinations appear in the exact required order.
+- [x] The six public destinations appear in the documented order, including a direct Home return.
 - [x] Login and Back Office do not appear in public navigation.
 - [x] The AI-generated dragonfly logo is visible, has meaningful alternative text, scales correctly, and navigates to Home.
 - [x] Desktop navigation is horizontal and sticky above 768px.

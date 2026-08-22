@@ -284,7 +284,7 @@ html[data-presentation-mode='dramatic'] .desktop-navigation__link[aria-current='
 
 .mobile-navigation__list {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .mobile-navigation__link {
@@ -1465,7 +1465,7 @@ html[data-presentation-mode='dramatic'] .message-table .button-danger {
   }
 
   .skill-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .case-study-stages {
@@ -1551,6 +1551,10 @@ html[data-presentation-mode='dramatic'] .message-table .button-danger {
 
   .home-section--image-first .home-section__image {
     order: -1;
+  }
+
+  .home-section--skills .home-section__image {
+    max-height: none;
   }
 }
 

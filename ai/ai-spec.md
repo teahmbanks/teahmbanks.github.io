@@ -40,11 +40,12 @@ The experience should communicate that the portfolio owner is a developer, educa
 - A React application scaffolded with Vite and written in JavaScript.
 - A single-page public portfolio hosted at `https://username.github.io`.
 - Public navigation in this exact order:
-  1. Featured Projects
-  2. Skills and Experience
-  3. About Me
-  4. Contact
-  5. Links
+  1. Home
+  2. Featured Projects
+  3. Skills and Experience
+  4. About Me
+  5. Contact
+  6. Links
 - An introduction containing the portfolio owner's name, role/title or tagline, and a short professional summary.
 - Technical skills and soft skills/talents, each with supporting text and meaningful icons.
 - Education, work experience, project experience, and a downloadable resume PDF.
