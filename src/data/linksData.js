@@ -13,8 +13,8 @@ export const resourceLinks = [
       'Review my repositories, development history, and the code behind projects as they continue to grow.',
     href: 'https://github.com/teahmbanks',
     image: {
-      src: '/images/home/problem-solving-path.jpg',
-      alt: 'Editorial illustration of pathways connecting ideas and modular technology',
+      src: '/images/links/github.png',
+      alt: 'GitHub Octocat mark',
     },
   },
   {
@@ -24,8 +24,8 @@ export const resourceLinks = [
       'View my professional experience across software development, education, and production management.',
     href: 'https://www.linkedin.com/in/teah-banks-952993149',
     image: {
-      src: '/images/home/connected-strengths.jpg',
-      alt: 'Editorial illustration connecting an open book, a theater stage, and technology',
+      src: '/images/links/linkedin.png',
+      alt: 'LinkedIn logo',
     },
   },
   {
@@ -35,8 +35,8 @@ export const resourceLinks = [
       'Learn about the AI-enabled, full-stack software-development program supporting my current engineering training.',
     href: 'https://academy.codeboxx.com/',
     image: {
-      src: '/images/portfolio/cross-disciplinary-work.webp',
-      alt: 'Editorial illustration connecting software, learning, communication, and production planning',
+      src: '/images/links/codeboxx.png',
+      alt: 'CodeBoxx Academy logo',
     },
   },
 ]

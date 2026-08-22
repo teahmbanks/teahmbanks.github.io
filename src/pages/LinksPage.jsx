@@ -19,10 +19,10 @@ function LinksPage() {
               <article className="resource-card">
                 <img
                   alt={resource.image.alt}
-                  height="1024"
+                  height="192"
                   loading="lazy"
                   src={resource.image.src}
-                  width="1536"
+                  width="192"
                 />
                 <div className="resource-card__content">
                   <h3>{resource.title}</h3>
