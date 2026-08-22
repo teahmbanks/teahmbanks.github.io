@@ -7,15 +7,11 @@ import PortfolioPage from './pages/PortfolioPage.jsx'
 import SkillsExperiencePage from './pages/SkillsExperiencePage.jsx'
 import AboutPage from './pages/AboutPage.jsx'
 import LinksPage from './pages/LinksPage.jsx'
+import ContactPage from './pages/ContactPage.jsx'
 import WelcomePortal from './pages/WelcomePortal.jsx'
 import { publicViewIds } from './data/navigation.js'
 
 const placeholderViews = {
-  contact: {
-    eyebrow: 'Connect',
-    title: 'Contact',
-    description: 'LinkedIn access and the secure Supabase-backed message form will be available here.',
-  },
 }
 
 /** Coordinates shared public-view state without adding public route paths. */
@@ -61,6 +57,10 @@ function App() {
 
     if (activeView === 'links') {
       return <LinksPage />
+    }
+
+    if (activeView === 'contact') {
+      return <ContactPage />
     }
 
     const view = placeholderViews[activeView] ?? placeholderViews.about
