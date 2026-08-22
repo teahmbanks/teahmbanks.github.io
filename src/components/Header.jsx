@@ -46,7 +46,7 @@ function Header({ activeView, onNavigate }) {
           />
           <span className="brand-link__text">
             <strong>Teah Banks</strong>
-            <span>Accessible to All</span>
+            <span>Bringing access to everyone</span>
           </span>
         </a>
 
