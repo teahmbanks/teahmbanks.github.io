@@ -14,6 +14,13 @@ function PortfolioPage() {
   return (
     <div className="portfolio-page">
       <section className="portfolio-hero" aria-labelledby="view-heading">
+        <img
+          alt={portfolioImages.hero.alt}
+          className="portfolio-hero__image"
+          height="724"
+          src={portfolioImages.hero.src}
+          width="2172"
+        />
         <div className="portfolio-hero__content">
           <p className="page-panel__eyebrow">{portfolioIntroduction.eyebrow}</p>
           <h1 id="view-heading" tabIndex="-1">{portfolioIntroduction.title}</h1>
@@ -22,13 +29,6 @@ function PortfolioPage() {
             {resume.label}
           </a>
         </div>
-        <img
-          alt={portfolioImages.experience.alt}
-          className="portfolio-hero__image"
-          height="1024"
-          src={portfolioImages.experience.src}
-          width="1536"
-        />
       </section>
 
       <section className="portfolio-section" aria-labelledby="projects-heading">

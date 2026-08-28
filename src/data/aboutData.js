@@ -5,6 +5,13 @@ export const aboutIntroduction = {
     'My path through theater, education, and software development may look varied, but the work has always centered on the same practice: understand what people need, organize the moving parts, and build a practical way forward.',
 }
 
+export const aboutImages = {
+  hero: {
+    src: '/images/portfolio/about-me-journey-banner.webp',
+    alt: 'Abstract personal journey where theater, education, and software systems converge around a golden dragonfly',
+  },
+}
+
 export const journeyStages = [
   {
     id: 'theater',

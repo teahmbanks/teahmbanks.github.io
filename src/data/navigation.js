@@ -1,6 +1,12 @@
 /** Public navigation is defined once so desktop and mobile orders cannot drift. */
 export const publicNavigation = [
   {
+    id: 'home',
+    label: 'Home',
+    shortLabel: 'Home',
+    icon: 'home',
+  },
+  {
     id: 'portfolio',
     label: 'Featured Projects',
     shortLabel: 'Projects',

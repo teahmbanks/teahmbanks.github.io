@@ -1,6 +1,6 @@
 # Feature Specification - Shared Layout, Header, Footer, and Dramatic Presentation
 
-> Use this specification together with `docs/ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
+> Use this specification together with `ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
 
 ## 1. Feature Goal
 
@@ -41,11 +41,12 @@ Create the shared application frame that appears across all public portfolio vie
 
 The public navigation order is fixed:
 
-1. Featured Projects
-2. Skills and Experience
-3. About Me
-4. Contact
-5. Links
+1. Home
+2. Featured Projects
+3. Skills and Experience
+4. About Me
+5. Contact
+6. Links
 
 - Navigation items behave as same-document application links and do not add `/home`, `/portfolio`, or other public route paths.
 - The active destination is identified visually and with `aria-current="page"`.
@@ -63,7 +64,7 @@ The public navigation order is fixed:
 
 ### Mobile bottom navigation
 
-- At 768px and below, the five main navigation items move to a fixed bottom bar.
+- At 768px and below, the six main navigation items move to a fixed bottom bar.
 - Each item has a decorative icon and a visible text label.
 - Each activation target is at least 44 CSS pixels in its primary dimension.
 - The layout accounts for mobile safe-area insets and adds enough bottom padding to keep page/footer content visible.
@@ -120,12 +121,12 @@ Each shared item contains:
 
 Navigation definitions must be stored once and rendered by both desktop and mobile navigation.
 
-### Presentation-mode validation
+### Presentation validation
 
-- Accept only the three documented mode strings.
-- Ignore unknown stored values.
-- Catch local-storage read/write failures without breaking rendering.
-- Do not store personal data, message content, or authentication data with the presentation preference.
+- Apply the single documented `dramatic` value at the application root.
+- Do not require local storage or expose a presentation selector.
+- The navigation list is the single source of truth for desktop and mobile rendering.
+- Do not associate personal data, message content, or authentication data with presentation styling.
 
 ## 7. Expected and Failure Behavior
 
@@ -170,7 +171,7 @@ Navigation definitions must be stored once and rendered by both desktop and mobi
 - [x] Work is performed on `feature/header-footer`, created from synchronized `dev`.
 - [x] The global specification and this feature specification were reviewed before implementation.
 - [x] `MainLayout` wraps all public content between a reusable header and footer.
-- [x] The required five public destinations appear in the exact required order.
+- [x] The six public destinations appear in the documented order, including a direct Home return.
 - [x] Login and Back Office do not appear in public navigation.
 - [x] The AI-generated dragonfly logo is visible, has meaningful alternative text, scales correctly, and navigates to Home.
 - [x] Desktop navigation is horizontal and sticky above 768px.

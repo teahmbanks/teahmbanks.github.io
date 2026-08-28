@@ -6,7 +6,7 @@ function Footer({ onNavigate }) {
     <footer className="site-footer">
       <div className="site-footer__inner">
         <div>
-          <p className="site-footer__brand">Accessible to All</p>
+          <p className="site-footer__brand">Problem Solving Through Adaptation</p>
           <p className="site-footer__statement">
             A dramatic portfolio built around thoughtful problem-solving.
           </p>

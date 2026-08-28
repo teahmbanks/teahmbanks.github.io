@@ -1,6 +1,6 @@
 # Feature Specification - Home Page
 
-> Use this specification together with `docs/ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
+> Use this specification together with `ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
 
 ## 1. Feature Goal
 
@@ -31,8 +31,9 @@ Replace the temporary Home placeholder with a clear, responsive introduction to 
 
 ### Root and introduction
 
-- `HomePage` is the default content view after a visitor chooses a presentation mode.
+- `HomePage` is the default content view when a visitor opens the root URL.
 - Public navigation remains at `/`; selecting Home must not add a route path.
+- Home appears as the first desktop and mobile navigation destination so visitors can return after opening another view.
 - Display `Teah Banks` prominently in the page-level heading.
 - Display a short role or tagline connecting software development, education, and adaptive problem-solving.
 - Include a brief introduction written in a warm, direct, professional voice.

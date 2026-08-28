@@ -6,6 +6,10 @@ export const portfolioIntroduction = {
 }
 
 export const portfolioImages = {
+  hero: {
+    src: '/images/portfolio/problem-to-solution-banner.webp',
+    alt: 'Abstract journey from tangled questions and investigative lines to a carefully constructed golden pathway',
+  },
   problemSolving: {
     src: '/images/portfolio/problem-solving-journey.webp',
     alt: 'Editorial illustration of a winding problem-solving path connecting investigation, building, testing, and reflection',
@@ -34,6 +38,35 @@ export const projects = [
     description:
       'StageSpace brings my theater-production experience into a full-stack application. Its current foundation includes public and protected routes, account creation and sign-in, company and production views, backstage hubs, and department workspaces ready for deeper production tools.',
     image: portfolioImages.experience,
+    preview: {
+      id: 'stagespace',
+      scenes: [
+        {
+          id: 'welcome',
+          label: 'Welcome',
+          address: 'stagespace.local/',
+          image: '/images/portfolio/stagespace-welcome.webp',
+          alt: 'StageSpace welcome page with theater collaboration messaging and a backstage dashboard preview',
+          caption: 'The public welcome view introduces the shared backstage workspace and its production-focused structure.',
+        },
+        {
+          id: 'sign-in',
+          label: 'Sign in',
+          address: 'stagespace.local/login',
+          image: '/images/portfolio/stagespace-login.webp',
+          alt: 'StageSpace sign-in page for returning theater collaborators',
+          caption: 'Authentication protects the company dashboards, production rooms, and department workspaces behind this entry point.',
+        },
+        {
+          id: 'sign-up',
+          label: 'Create account',
+          address: 'stagespace.local/signup',
+          image: '/images/portfolio/stagespace-signup.webp',
+          alt: 'StageSpace account creation page with role and membership choices',
+          caption: 'The account flow begins separating individual and company-member needs before users enter a workspace.',
+        },
+      ],
+    },
     repository: {
       href: 'https://github.com/teahmbanks/Personal-project--Theater-website',
       label: 'View StageSpace on GitHub',
@@ -76,6 +109,35 @@ export const projects = [
     description:
       'CodeBloggs is a full-stack social platform with registration, session-based authentication, posts, comments, replies, likes, user networking, account settings, and administrative interfaces. Later work strengthened the project through Lighthouse audits and a repeatable Selenium test suite.',
     image: portfolioImages.problemSolving,
+    preview: {
+      id: 'codebloggs',
+      scenes: [
+        {
+          id: 'feed',
+          label: 'Community feed',
+          address: 'codebloggs.local/home',
+          product: 'codebloggs',
+          view: 'feed',
+          caption: 'A representative sample of the social feed where members publish ideas and join conversations.',
+        },
+        {
+          id: 'network',
+          label: 'Developer network',
+          address: 'codebloggs.local/network',
+          product: 'codebloggs',
+          view: 'network',
+          caption: 'Explore the network through developer cards, presence, profile details, and recent activity.',
+        },
+        {
+          id: 'profile',
+          label: 'Member profile',
+          address: 'codebloggs.local/users/teah-banks',
+          product: 'codebloggs',
+          view: 'profile',
+          caption: 'A member profile brings identity, activity, account level, and community connections together.',
+        },
+      ],
+    },
     repository: {
       href: 'https://github.com/teahmbanks/Module-15',
       label: 'View CodeBloggs on GitHub',
@@ -118,6 +180,35 @@ export const projects = [
     description:
       'Rocket Food Delivery combines a Spring Boot REST API and administrative back office with an Expo mobile application. It supports role-aware customer and courier experiences, restaurant ordering, delivery management, account tools, order history, and optional notification preferences.',
     image: portfolioImages.experience,
+    preview: {
+      id: 'rocket-delivery',
+      scenes: [
+        {
+          id: 'restaurants',
+          label: 'Browse restaurants',
+          address: 'rocket-delivery.app/customer/restaurants',
+          product: 'rocket-delivery',
+          view: 'restaurants',
+          caption: 'Browse a representative restaurant list with the rating and price filters used by the mobile client.',
+        },
+        {
+          id: 'menu',
+          label: 'Build an order',
+          address: 'rocket-delivery.app/customer/restaurants/12',
+          product: 'rocket-delivery',
+          view: 'menu',
+          caption: 'Step into a restaurant menu, adjust item quantities, and see the order total take shape.',
+        },
+        {
+          id: 'delivery',
+          label: 'Track delivery',
+          address: 'rocket-delivery.app/orders/42',
+          product: 'rocket-delivery',
+          view: 'delivery',
+          caption: 'Follow a representative order from restaurant confirmation to courier pickup and arrival.',
+        },
+      ],
+    },
     repository: {
       href: 'https://github.com/teahmbanks/Module-14',
       label: 'View Rocket Food Delivery on GitHub',

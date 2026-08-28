@@ -1,6 +1,6 @@
 # Feature Specification - Setup and Deploy
 
-> Use this specification together with `docs/ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
+> Use this specification together with `ai/ai-spec.md`. The Module 16 rubric remains the grading authority.
 
 ## 1. Feature Goal
 
@@ -75,7 +75,7 @@ Create a clean React/Vite JavaScript foundation that can be installed reproducib
 - Deploy through the official GitHub Pages deployment action.
 - Use a deployment concurrency group so an older deployment cannot overwrite a newer one.
 
-## 4. User and Delivery Flow
+## 4. User Flow and Delivery Flow
 
 1. A developer clones the repository.
 2. The developer creates a local `.env` from `.env.example` and supplies private values locally.
@@ -145,7 +145,7 @@ Create a clean React/Vite JavaScript foundation that can be installed reproducib
 ## 8. Acceptance Criteria
 
 - [x] The work is performed on `feature/setup-deploy`, created from synchronized `dev`.
-- [x] `docs/ai/ai-spec.md` and this feature specification were reviewed before implementation.
+- [x] `ai/ai-spec.md` and this feature specification were reviewed before implementation.
 - [x] `npm ci` succeeds from the committed lockfile.
 - [x] `npm run lint` succeeds without ignored errors.
 - [x] `npm run build` succeeds and produces `dist/`.
