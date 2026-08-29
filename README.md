@@ -61,6 +61,7 @@ teahmbanks.github.io/
 │   ├── pitch-feedback.md          # Elevator-pitch feedback deliverable
 │   ├── script-1.md                # First elevator-pitch script
 │   └── script-2.md                # Revised elevator-pitch script
+├── LeetCode-Challenges/            # Five required Accepted-result screenshots
 ├── public/
 │   ├── images/                    # Logo and generated editorial artwork
 │   └── resume/                    # Downloadable resume PDF
@@ -79,7 +80,9 @@ teahmbanks.github.io/
 ├── .env.example                   # Public configuration placeholders
 ├── CONCEPTS.md                    # Technical interview concept explanations
 ├── RESEARCH.md                    # AI asset research and generation record
+├── Submissiondoc.md               # Required submission links and credential handoff
 ├── index.html                     # Vite HTML entry point
+├── package-lock.json              # Reproducible npm dependency versions
 ├── package.json                   # Dependencies and project scripts
 └── vite.config.js                 # Root-path GitHub Pages configuration
 ```
