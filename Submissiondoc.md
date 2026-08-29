@@ -22,4 +22,7 @@ Technical Concepts Explanation Video: https://youtu.be/PsU7BCqyV5w
 
 Problem-Solving and LeetCode Explanation Video: https://youtu.be/3ltSTvRDHwc
 
-Portfolio Technical Demonstration and Code Explanation Video: 
+Portfolio Technical Demonstration and Code Explanation Video: https://youtu.be/lszm2x7Eep8 
+
+
+.env: https://docs.google.com/document/d/13tcjxe08qAyhloFtGi3CtamNZsrz2JvmWj3DLnAZAjU/edit?usp=sharing
